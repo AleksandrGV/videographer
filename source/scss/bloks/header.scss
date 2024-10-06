@@ -1,0 +1,31 @@
+
+.header {
+  padding: 0;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  margin: 0 80px;
+}
+
+.header__call-back {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.header__call-back-open-form {
+  background-color: $white;
+  border: 2px solid $rich-orange;
+  @include button();
+  padding: 8px 24px;
+  color: $rich-orange;
+}
+
+.header__call-back-phone {
+  color: $wet-asphalt;
+  text-decoration: none;
+}

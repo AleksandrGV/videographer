@@ -1,0 +1,51 @@
+
+
+// Примеси
+
+@mixin list-reset() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+// Vievport
+
+@mixin mobile-only() {
+  @media (max-width: ($breakpoints("xs"))) {
+    @content();
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: ($breakpoints("sm"))) {
+    @content();
+  }
+}
+
+@mixin desktop() {
+  @media (min-width: ($breakpoints("md"))) {
+    @content();
+  }
+}
+
+// Стили для кнопки
+
+@mixin button() {
+  display: block;
+  padding: 22px 27px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 10px;
+  background-color: $background-button;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    background: $background-button;
+    opacity: 0.8;
+  }
+}

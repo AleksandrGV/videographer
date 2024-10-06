@@ -1,0 +1,26 @@
+
+$max-content-width: 1480px;
+
+// Переменные медиа запросы
+
+$breakpoints: (
+  "xs": 375px,
+  "lg": 1024px,
+  "xxl": 1440px,
+);
+
+// Перменные цвета
+
+$white: #FFFFFF;
+$smoky-white: #F5F5F5;
+$silver: #C1C1C1;
+$light-gray: #B1B1B1;
+$light-gray-play: #D8D8D8;
+$pearlescent-light-gray: #999999;
+$wet-asphalt: #4A4A4A;
+$signal-black: #333333;
+$rich-orange: #E97522;
+
+// Градиент для кнопки
+
+$background-button: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);

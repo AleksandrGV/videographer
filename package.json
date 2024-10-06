@@ -1,0 +1,50 @@
+{
+  "name": "gulp-new",
+  "version": "1.0.0",
+  "description": "GULP начало создания нового проекта:",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig-checker",
+    "stylelint": "stylelint \"**/*.scss\" --fix scss",
+    "linthtml": "linthtml source/*.html --config .linthtmlrc",
+    "test": "npm run editorconfig && npm run stylelint",
+    "public": "gulp public",
+    "start": "gulp"
+  },
+  "author": "Goncharenko Aleksandr",
+  "license": "ISC",
+  "devDependencies": {
+    "@linthtml/linthtml": "^0.9.5",
+    "autoprefixer": "^10.4.17",
+    "browser-sync": "^3.0.2",
+    "editorconfig-checker": "^5.1.2",
+    "gulp": "^4.0.2",
+    "gulp-avif": "^1.1.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-fonter": "^0.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-include": "^2.4.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-ttf2woff2": "^4.0.1",
+    "gulp-uglify-es": "^3.0.0",
+    "gulp-webp": "^4.0.1",
+    "linthtml-config-htmlacademy": "^1.0.16",
+    "sass": "^1.70.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.0.5",
+    "stylelint-config-recess-order": "^4.4.0",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-scss": "^6.1.0"
+  },
+  "dependencies": {
+    "npm": "^10.3.0"
+  }
+}

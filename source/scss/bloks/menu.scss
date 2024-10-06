@@ -1,0 +1,27 @@
+
+.menu__toggle {
+  display: none;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  flex-wrap: wrap;
+  @include list-reset;
+}
+
+.menu__link {
+  color: $wet-asphalt;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+
+  &--active {
+    color: $rich-orange;
+  }
+
+  &:hover {
+    color: $signal-black;
+  }
+}

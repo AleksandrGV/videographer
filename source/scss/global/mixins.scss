@@ -32,20 +32,28 @@
 
 @mixin button() {
   display: block;
-  padding: 22px 27px;
+  padding: 22px 25px 22px 27px;
   font-size: 16px;
   font-weight: 600;
   line-height: 20px;
+  letter-spacing: 3px;
   color: $white;
   text-align: center;
   text-transform: uppercase;
+  background: $background-button;
   border-radius: 10px;
-  background-color: $background-button;
   text-decoration: none;
 
   &:hover {
-    color: $white;
-    background: $background-button;
     opacity: 0.8;
+    transition: 1s;
   }
+}
+
+@mixin heading() {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  color: $signal-black;
 }

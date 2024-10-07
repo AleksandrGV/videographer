@@ -1,0 +1,49 @@
+
+.about-us {
+  color: $smoky-white;
+  background-color: $gray-brown;
+}
+
+.about-us__wrap {
+  max-width: 950px;
+  padding: 0 58px 0 80px;
+  margin: 140px 0 131px;
+}
+
+.about-us__title {
+  font-size: 66px;
+  font-weight: bold;
+  line-height: 78px;
+  letter-spacing: 3.2px;
+  margin-bottom: 52px;
+}
+
+.line-second {
+  letter-spacing: normal;
+}
+
+.about-us__subtitle {
+  padding-right: 80px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 24px;
+}
+
+.about-us__text {
+  padding-right: 28px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:last-child {
+  margin-bottom: 32px;
+  }
+}
+
+
+.button {
+  max-width: 366px;
+  @include button();
+}

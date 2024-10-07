@@ -1,20 +1,30 @@
 
+.menu {
+  margin-top: 5px;
+  margin-left: 45px;
+}
+
 .menu__toggle {
   display: none;
 }
 
 .menu__list {
   display: flex;
-  justify-content: space-between;
-  column-gap: 30px;
+  justify-content: start;
+  column-gap: 3px;
   flex-wrap: wrap;
   @include list-reset;
+}
+
+.menu__item {
+  margin-right: 10px;
 }
 
 .menu__link {
   color: $wet-asphalt;
   font-size: 14px;
   line-height: 20px;
+  padding: 5px 10px;
   text-decoration: none;
 
   &--active {

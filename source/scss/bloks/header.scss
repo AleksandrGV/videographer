@@ -1,31 +1,42 @@
 
 .header {
-  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 3px;
 }
 
 .header__wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 20px;
+  display: grid;
+  grid-template-columns: max-content 4fr 2fr;
+  column-gap: 46px;
   margin: 0 80px;
 }
 
 .header__call-back {
   display: flex;
-  align-items: center;
-  column-gap: 20px;
+  align-items: flex-start;
+  column-gap: 25px;
+  padding-top: 4px;
 }
 
 .header__call-back-open-form {
+  font-size: 12px;
+  padding: 0 22px;
+  color: $rich-orange;
   background-color: $white;
   border: 2px solid $rich-orange;
-  @include button();
-  padding: 8px 24px;
-  color: $rich-orange;
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: $rich-orange;
+    color: $white;
+  }
 }
 
 .header__call-back-phone {
   color: $wet-asphalt;
   text-decoration: none;
 }
+

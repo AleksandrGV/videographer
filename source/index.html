@@ -17,7 +17,11 @@
     <div class="container">
       <div class="header__wrap">
         <a class="logo" href="#index.html">
-          <img class="logo-img" src="img/logo.svg" width="108" height="35" alt="Логотип">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" type="image/svg+xml" width="108" height="35">
+            <source media="(min-width: 1024px)" srcset="img/logo-tablet.svg" type="image/svg+xml" width="113" height="36">
+            <img class="logo-img" src="img/logo-mobile.svg" alt="Логотип Add Shop" width="63" height="20">
+          </picture>
         </a>
         <nav class="menu">
           <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -39,57 +43,94 @@
 
 <!-- Main -->
   <main class="page-main">
-  <section class="about-me">
+  <section class="about-us">
       <div class="container">
-        <h1 class="title">Профессиональная фотосессия в студии</h1>
-        <h4 class="about-me__subtitle">Наша фотостудия позволит исполнить ваши мечты</h4>
-        <p class="about-me__text">Фотографии стали неотъемлемой частью нашей жизни.
-          Это теперь не просто памятные снимки в альбомах, ныне фото становиться способом понравиться окружающим, получить восхищение, заявить о себе всему миру.</p>
-        <p class="about-me__text">Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь
-          довольны и еще не раз захотите возвращаться к нам.</p>
-        <a class="button open-form-call-back" href="#form-callback.html">Обратный звонок</a>
+        <div class="about-us__wrap">
+          <h1 class="about-us__title">Профессиональная <span class="line-second">фотосессия в студии</span></h1>
+          <h4 class="about-us__subtitle">Наша фотостудия позволит исполнить ваши мечты</h4>
+          <div class="about-us__wrap-text">
+            <p class="about-us__text">Фотографии стали неотъемлемой частью нашей жизни.
+              Это теперь не просто памятные снимки в альбомах, ныне фото становиться способом понравиться окружающим, получить восхищение, заявить о себе всему миру.</p>
+            <p class="about-us__text">Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь
+              довольны и еще не раз захотите возвращаться к нам.</p>
+          </div>
+          <a class="button open-form-call-back" href="#form-callback.html">Получить консультацию</a>
+        </div>
       </div>
     </section>
     <section class="our-works">
       <div class="container">
         <h3 class="heading">Наши работы</h3>
-        <div class="our-works-slider">
-          <ul class="list our-works-slider__list">
-            <li class="our-works-slider__item">
-              <article class="out-works-card">
+          <div class="our-works-slider">
+            <ul class="list our-works-slider__list">
+              <li class="our-works-slider__item left">
                 <h6 class="visually-hidden">Наша работа №1</h6>
                 <picture>
-                  <source srcset="img/our-works-left.avif" type="image/avif">
-                  <source srcset="img/our-works-left.webp" type="image/webp">
-                  <source srcset="img/our-works-left.jgp" type="image/jpg">
-                  <img src="img/our-locations-left.jpg" alt="Наши работы 1" width="556" height="618">
+                  <source srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
+                  <source srcset="img/our-works-left.webp" type="image/webp" width="556" height="618">
+                  <source srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
+                  <img class="our-works-slider__img" src="img/our-locations-left.jpg" alt="Наши работы 1" width="556" height="618">
                 </picture>
-              </article>
-            </li>
-            <li class="our-works-slider__item">
-              <article class="out-works-card">
+              </li>
+              <li class="our-works-slider__item active">
                 <h6 class="visually-hidden">Наша работа №2</h6>
                 <picture>
-                  <source srcset="img/our-works-center.avif" type="image/avif">
-                  <source srcset="img/our-works-center.webp" type="image/webp">
-                  <source srcset="img/our-works-center.jgp" type="image/jpg">
-                  <img src="img/our-locations-center.jpg" alt="Наши работы 1" width="556" height="618">
+                  <source srcset="img/our-works-center.avif" type="image/avif" width="556" height="618">
+                  <source srcset="img/our-works-center.webp" type="image/webp" width="556" height="618">
+                  <source srcset="img/our-works-center.jgp" type="image/jpg" width="556" height="618">
+                  <img class="our-works-slider__img" src="img/our-locations-center.jpg" alt="Наши работы 1" width="556" height="618">
                 </picture>
-              </article>
-            </li>
-            <li class="our-works-slider__item">
-              <article class="out-works-card">
+              </li>
+              <li class="our-works-slider__item right">
                 <h6 class="visually-hidden">Наша работа №3</h6>
                 <picture>
-                  <source srcset="img/our-works-right.avif" type="image/avif">
-                  <source srcset="img/our-works-right.webp" type="image/webp">
-                  <source srcset="img/our-works-right.jgp" type="image/jpg">
-                  <img src="img/our-locations-left.jpg" alt="Наши работы 1" width="556" height="618">
+                  <source srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
+                  <source srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
+                  <source srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
+                  <img class="our-works-slider__img" src="img/our-locations-left.jpg" alt="Наши работы 1" width="556" height="618">
                 </picture>
-              </article>
-            </li>
-          </ul>
-        </div>
+              </li>
+            </ul>
+            <ul class="slider-control">
+              <li class="slider-control__item">
+                  <button class="control control-left" id="bitton-left" type="button">
+                      <span class="visually-hidden">Стрелка влево</span>
+                  </button>
+              </li>
+              <li class="slider-control__item">
+                <button class="control control-right" id="button-right" type="button">
+                  <span class="visually-hidden">Стрелка вправо</span>
+                </button>
+              </li>
+            </ul>
+            <ul class="list dots">
+              <li class="dots__item">
+                <button class="dots__button active" type="button" onclick="currentSlide(0)">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button>
+              </li>
+                <li class="dots__item">
+                  <button class="dots__button" type="button" onclick="currentSlide(1)">
+                    <span class="visually-hidden">Второй слайд</span>
+                </button>
+              </li>
+                <li class="dots__item">
+                  <button class="dots__button" type="button" onclick="currentSlide(2)">
+                    <span class="visually-hidden">Третий слайд</span>
+                  </button>
+                </li>
+                <li class="dots__item">
+                  <button class="dots__button" type="button" onclick="currentSlide(3)">
+                    <span class="visually-hidden">Четвертый слайд</span>
+                  </button>
+                </li>
+                <li class="dots__item">
+                  <button class="dots__button" type="button" onclick="currentSlide(4)">
+                    <span class="visually-hidden">Пятый слайд</span>
+                  </button>
+                </li>
+            </ul>
+          </div>
       </div>
     </section>
     <section class="price">

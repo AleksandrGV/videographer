@@ -86,20 +86,20 @@ const images = () => {
     .pipe(dest('source/img'))
 };
 
-// Svg Sprite
+// // Svg Sprite
 
-const sprite = () => {
-  return src('source/img/*.svg')
-    .pipe(svgSprite({
-      mode: {
-        stack: {
-          sprite: '../sprite.svg',
-          example: true
-        }
-      }
-    }))
-    .pipe(dest('source/img'))
-};
+// const sprite = () => {
+//   return src('source/img/*.svg')
+//     .pipe(svgSprite({
+//       mode: {
+//         stack: {
+//           sprite: '../sprite.svg',
+//           example: true
+//         }
+//       }
+//     }))
+//     .pipe(dest('source/img'))
+// };
 
 
 // Scripts

@@ -1,0 +1,38 @@
+//Дотсы
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include list-reset();
+
+  &__button {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background-color: $white;
+
+    &::after {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      position: absolute;
+      background-color: $light-gray;
+
+    }
+
+    &.active {
+      &::after {
+        width: 12px;
+        height: 12px;
+        background-color: $rich-orange;
+      }
+    }
+  }
+}

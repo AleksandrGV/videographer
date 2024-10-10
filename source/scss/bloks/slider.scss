@@ -49,12 +49,12 @@
 
     &.left {
       top: 58px;
-      left: -26px;
+      left: -4px;
     }
 
     &.right {
       top: 58px;
-      right: -26px;
+      right: -4px;
     }
   }
 
@@ -66,8 +66,11 @@
 
 // Стили для слайдера раздела наши локации
 
-.our-locations-slider__list {
-  height: 349px;
-  column-gap: 27px;
+.our-locations-slider {
+  margin-bottom: 24px;
+  &__list {
+    height: 349px;
+    column-gap: 27px;
+  }
 }
 

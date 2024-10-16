@@ -1,0 +1,18 @@
+.gift-certificate {
+  padding-top: 24px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/background-line-certificate.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 6px;
+    bottom: -589px;
+    // opacity: 0.2;
+  }
+}

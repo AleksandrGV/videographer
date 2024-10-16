@@ -1,0 +1,95 @@
+.gift-certificate-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $beige;
+  border-radius: 25px;
+  padding-top: 23px;
+  padding-bottom: 50px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-left: 7px;
+  margin-right: 7px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: $light-telegray;
+    margin-bottom: 9px;
+  }
+
+  &__slogan {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    color: $signal-black;
+    text-align: center;
+    margin-left: 36px;
+    margin-right: 36px;
+    margin-bottom: 22px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include list-reset();
+    margin-bottom: 4px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-weight: 600;
+    line-height: 140%;
+    padding-top: 38px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      display: block;
+      background-image: url("../img/icon-certeficate.svg");
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 5px;
+      left: 43%;
+    }
+  }
+
+  &__img {
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__warning {
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+    color: $signal-black;
+    margin-left: 14px;
+    margin-right: 14px;
+    margin-bottom: 16px;
+  }
+
+  & .about-us-open-form-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  & .about-us__open-form {
+    width: 100%;
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+}

@@ -1,0 +1,11 @@
+.photo-trend {
+  margin-bottom: 10px;
+  background-color: $beige;
+  &__text {
+    margin-bottom: 17px;
+
+    &--open {
+      margin-bottom: 4px;
+    }
+  }
+}

@@ -2,12 +2,12 @@
 .our-works {
   max-width: 1440px;
   width: 100%;
-  padding-top: 84px;
-  padding-bottom: 70px;
-  margin: 0 auto;
+  padding-top: 37px;
+  padding-bottom: 15px;
+  margin: 0 auto 15px;
 }
 
 .heading {
   @include heading();
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }

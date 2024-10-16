@@ -6,9 +6,13 @@
   justify-content: center;
   @include list-reset();
 
+  &__item {
+    margin: 1px 0 1px 3px;
+  }
+
   &__button {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     display: flex;
     align-items: center;
     justify-content: center;

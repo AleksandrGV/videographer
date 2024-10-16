@@ -3,4 +3,8 @@
   max-width: $max-content-width;
   padding: 10px 20px;
   margin: 0 auto;
+
+  &--mobile  {
+    padding: 5px 10px;
+  }
 }

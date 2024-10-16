@@ -10,9 +10,10 @@ $breakpoints: (
 );
 
 // Перменные цвета
-
 $white: #FFFFFF;
+$grideperleft: #F2F4F4;
 $smoky-white: #F5F5F5;
+$beige: #F9F4EE;
 $silver: #C1C1C1;
 $light-gray: #B1B1B1;
 $light-gray-play: #D8D8D8;
@@ -21,7 +22,9 @@ $wet-asphalt: #4A4A4A;
 $gray-brown: #444444;
 $signal-black: #333333;
 $rich-orange: #E97522;
-
+$greenish-white: #F5D9C6;
+$background-menu: rgba(15, 15, 15, 0.7);
+$box-shadow-control: rgba(0, 0, 0, 0.15);
 // Градиент для кнопки
 
 $background-button: linear-gradient(180deg, #FFA96B -21.43%, #EE7A28 100%);

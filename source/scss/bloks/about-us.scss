@@ -2,47 +2,62 @@
 .about-us {
   color: $smoky-white;
   background-color: $gray-brown;
-}
 
-.about-us__wrap {
-  max-width: 950px;
-  padding: 0 58px 0 80px;
-  margin: 140px 0 131px;
-}
+  &__wrap {
+    margin-top: 173px;
+    margin-bottom: 174px;
+  }
 
-.about-us__title {
-  font-size: 66px;
-  font-weight: bold;
-  line-height: 78px;
-  letter-spacing: 3.2px;
-  margin-bottom: 52px;
-}
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 140%;
+    letter-spacing: 1.2px;
+    margin-bottom: 31px;
+    }
+
+    &__subtitle,
+    &__text {
+      display: none;
+    }
+
+    &__open-form {
+      margin-left: 7px;
+    }
+  }
 
 .line-second {
   letter-spacing: normal;
 }
 
-.about-us__subtitle {
-  padding-right: 80px;
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 120%;
-  margin-bottom: 24px;
-}
-
-.about-us__text {
-  padding-right: 28px;
-  font-size: 16px;
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 0;
-
-  &:last-child {
-  margin-bottom: 32px;
-  }
-}
-
-
 .button {
   @include button();
 }
+
+// .about-us__wrap {
+//   max-width: 950px;
+//   padding: 0 58px 0 80px;
+//   margin: 140px 0 131px;
+// }
+
+// .about-us__subtitle {
+//   padding-right: 80px;
+//   font-size: 36px;
+//   font-weight: 600;
+//   line-height: 120%;
+//   margin-bottom: 24px;
+// }
+
+// .about-us__text {
+//   padding-right: 28px;
+//   font-size: 16px;
+//   font-weight: 500;
+//   margin-top: 0;
+//   margin-bottom: 0;
+
+//   &:last-child {
+//   margin-bottom: 32px;
+//   }
+// }
+

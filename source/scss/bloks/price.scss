@@ -1,0 +1,14 @@
+.price {
+  padding-top: 33px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @include list-reset();
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}

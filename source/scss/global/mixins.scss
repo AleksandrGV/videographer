@@ -32,8 +32,8 @@
 
 @mixin button() {
   display: inline-block;
-  padding: 22px 25px 22px 27px;
-  font-size: 16px;
+  padding: 19px 18px 18px 22px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 20px;
   letter-spacing: 3px;
@@ -45,15 +45,16 @@
   text-decoration: none;
 
   &:hover {
+    color: $silver;
     opacity: 0.8;
     transition: 1s;
   }
 }
 
 @mixin heading() {
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 120%;
+  line-height: 140%;
   text-align: center;
   color: $signal-black;
 }

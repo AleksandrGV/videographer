@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт видеографа Гончаренко Ирины">
     <meta name="keywords" content="Видеосъёмка, видеограф, видеограф Тюмень, видеосьёмка на заказ">
+    <link rel="preload" href="fonts/Arial-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -14,7 +15,7 @@
 
   <body class="page__body">
   <header class="header">
-    <div class="container">
+    <div class="container container--mobile">
       <div class="header__wrap">
         <a class="logo" href="#index.html">
           <picture>
@@ -23,18 +24,22 @@
             <img class="logo-img" src="img/logo-mobile.svg" alt="Логотип Add Shop" width="63" height="20">
           </picture>
         </a>
-        <nav class="menu">
+        <nav class="menu menu--closed">
           <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="menu__list">
             <li class="menu__item"><a class="menu__link menu__link--active" href="#potrfolio" >Портфолио</a></li>
-            <li class="menu__item"><a class="menu__link" href="#type-of-work" >Виды работ</a></li>
+            <li class="menu__item"><a class="menu__link" href="#type-of-work">Виды работ</a></li>
             <li class="menu__item"><a class="menu__link" href="#about-photo-studio" >О фотостудии</a></li>
-            <li class="menu__item"><a class="menu__link" href="#services-and-prices" >Услуги и цены</a></li>
+            <li class="menu__item menu__item-mobile"><a class="menu__link" href="#reviews" >Отзывы</a></li>
+            <li class="menu__item menu__item-desktop"><a class="menu__link" href="#services-and-prices" >Услуги и цены</a></li>
             <li class="menu__item"><a class="menu__link" href="#contacts" >Контакты</a></li>
           </ul>
         </nav>
         <div class="header__call-back">
-          <a class="header__call-back-open-form" href="#form-callback.html">Обратный звонок</a>
+          <a class="header__call-back-open-form" href="#form-callback.html">
+            <span class="header__call-back-open-form-text">Обратный звонок</span>
+            <img class="header__call-back-open-form-icon-phone" src="img/icon-call.svg" alt="Phone" title="Обратный звонок" width="26" height="26">
+          </a>
           <a class="header__call-back-phone" href="+7(499)3446091" >+7 (499) 344 60 91</a>
         </div>
       </div>
@@ -54,7 +59,7 @@
             <p class="about-us__text">Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь
               довольны и еще не раз захотите возвращаться к нам.</p>
           </div>
-          <a class="button open-form-call-back" href="#form-callback.html">Получить консультацию</a>
+          <a class="button about-us__open-form" href="#form-callback.html">Получить консультацию</a>
         </div>
       </div>
     </section>
@@ -64,49 +69,76 @@
           <div class="slider our-works-slider">
             <ul class="list slider__list our-works-slider__list">
               <li class="slider__item our-works-slider__item left">
-                <h6 class="visually-hidden">Работа №1</h6>
                 <picture>
-                  <source srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
-                  <source srcset="img/our-works-left.webp" type="image/webp" width="556" height="618">
-                  <source srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
-                  <img class="our-works-slider__img" src="img/our-works-left.jpg" alt="Наши работы 1" width="556" height="618">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.avif" type="image/avif" width="406" height="451">
+                  <source srcset="img/our-works-left-mobile.avif" type="image/avif" width="237" height="262">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-left.webp" type="image/webp" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.webp" type="image/webp" width="406" height="451">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.jgp" type="image/jpg" width="406" height="451">
+                  <img class="our-works-slider__img" src="img/our-works-left-mobile.jpg" srcset="img/our-works-left-mobile.webp" alt="Наши работы 1" width="237" height="262">
                 </picture>
               </li>
               <li class="slider__item our-works-slider__item active">
-                <h6 class="visually-hidden">Работа №2</h6>
                 <picture>
-                  <source srcset="img/our-works-center.avif" type="image/avif" width="556" height="618">
-                  <source srcset="img/our-works-center.webp" type="image/webp" width="556" height="618">
-                  <source srcset="img/our-works-center.jgp" type="image/jpg" width="556" height="618">
-                  <img class="our-works-slider__img" src="img/our-works-center.jpg" alt="Наши работы 2" width="556" height="618">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-center.avif" type="image/avif" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.avif" type="image/avif" width="406" height="451">
+                  <source srcset="img/our-works-center-mobile.avif" type="image/avif" width="237" height="262">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-center.webp" type="image/webp" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.webp" type="image/webp" width="406" height="451">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-center.jgp" type="image/jpg" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.jgp" type="image/jpg" width="406" height="451">
+                  <img class="our-works-slider__img"
+                  src="img/our-works-center-mobile.jpg"
+                  srcset="img/our-works-center-mobile.webp"
+                  alt="Наши работы 1" width="237" height="262">
                 </picture>
               </li>
               <li class="slider__item our-works-slider__item right">
-                <h6 class="visually-hidden">Работа №3</h6>
                 <picture>
-                  <source srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
-                  <source srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
-                  <source srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
-                  <img class="our-works-slider__img" src="img/our-works-right.jpg" alt="Наши работы 3" width="556" height="618">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.avif" type="image/avif" width="406" height="451">
+                  <source srcset="img/our-works-right-mobile.avif" type="image/avif" width="237" height="262">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.webp" type="image/webp" width="406" height="451">
+                  <source media="(min-width: 1440px)" srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
+                  <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.jgp" type="image/jpg" width="406" height="451">
+                  <img class="our-works-slider__img"
+                  src="img/our-works-right-mobile.jpg"
+                  srcset="img/our-works-right-mobile.webp"
+                  alt="Наши работы 1" width="237" height="262">
                 </picture>
               </li>
               <li class="slider__item our-works-slider__item">
-                <h6 class="visually-hidden">Работа №4</h6>
                 <picture>
-                  <source srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
-                  <source srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
-                  <source srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
-                  <img class="our-works-slider__img" src="img/our-works-right.jpg" alt="Наша работа 4" width="556" height="618">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.avif" type="image/avif" width="406" height="451">
+                    <source srcset="img/our-works-left-mobile.avif" type="image/avif" width="237" height="262">
+                    <source media="(min-width: 1440px)" srcset="img/our-works-left.webp" type="image/webp" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.webp" type="image/webp" width="406" height="451">
+                    <source media="(min-width: 1440px)" srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.jgp" type="image/jpg" width="406" height="451">
+                    <img class="our-works-slider__img"
+                    src="img/our-works-left-mobile.jpg"
+                    srcset="img/our-works-left-mobile.webp"
+                    alt="Наши работы 1" width="237" height="262">
+                  </picture>
               </li>
               <li class="slider__item our-works-slider__item">
-                <h6 class="visually-hidden">Работа №5</h6>
                 <picture>
-                  <source srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
-                  <source srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
-                  <source srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
-                  <img class="our-works-slider__img" src="img/our-works-right.jpg" alt="Наша работа 5" width="556" height="618">
-                </picture>
+                    <source media="(min-width: 1440px)" srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.avif" type="image/avif" width="406" height="451">
+                    <source srcset="img/our-works-right-mobile.avif" type="image/avif" width="237" height="262">
+                    <source media="(min-width: 1440px)" srcset="img/our-works-right.webp" type="image/webp" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.webp" type="image/webp" width="406" height="451">
+                    <source media="(min-width: 1440px)" srcset="img/our-works-right.jgp" type="image/jpg" width="556" height="618">
+                    <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.jgp" type="image/jpg" width="406" height="451">
+                    <img class="our-works-slider__img"
+                    src="img/our-works-right-mobile.jpg"
+                    srcset="img/our-works-right-mobile.webp"
+                    alt="Наши работы 1" width="237" height="262">
+                  </picture>
               </li>
             </ul>
             <ul class="slider-control">
@@ -152,12 +184,11 @@
       <!-- </div> -->
     </section>
     <section class="our-locations">
-      <div class="container">
+      <div class="container container--mobile">
         <h3 class="heading">Наши локации</h3>
         <div class="slider our-locations-slider">
           <ul class="list slider__list our-locations-slider__list">
-            <li class="slider__item our-locations__item">
-              <h6 class="visually-hidden">Наша локация №1</h6>
+            <li class="slider__item our-locations-slider__item">
               <picture>
                 <source srcset="img/our-locations-left.avif" type="image/avif" width="395" height="349">
                 <source srcset="img/our-locations-left.webp" type="image/webp" width="395" height="349">
@@ -165,8 +196,7 @@
                 <img class="our-locations-slider__img" src="img/our-locations-left.jpg" alt="Наша локация 1" width="395" height="349">
               </picture>
             </li>
-            <li class="slider__item our-lications__item">
-              <h6 class="visually-hidden">Наша локация №2</h6>
+            <li class="slider__item our-locations-slider__item">
               <picture>
                 <source srcset="img/our-locations-center.avif" type="image/avif" width="395" height="349">
                 <source srcset="img/our-locations-center.webp" type="image/webp" width="395" height="349">
@@ -174,8 +204,7 @@
                 <img class="our-locations-slider__img" src="img/our-locations-center.jpg" alt="Наша локация 2" width="395" height="349">
               </picture>
             </li>
-            <li class="slider__item our-lications__item">
-              <h6 class="visually-hidden">Наша локация №3</h6>
+            <li class="slider__item our-locations-slider__item">
               <picture>
                 <source srcset="img/our-locations-right.avif" type="image/avif" width="395" height="349">
                 <source srcset="img/our-locations-right.webp" type="image/webp" width="395" height="349">
@@ -197,15 +226,15 @@
             </li>
           </ul>
         </div>
-        <div class="open-form-our-locations-wrap">
-          <a class="button open-form-our-locations" href="#form-our-locations.html">Выбрать локацию</a>
+        <div class="button-locations-open-form-wrap">
+          <a class="button button-locations-open-form" href="#form-our-locations.html">Выбрать локацию</a>
         </div>
       </div>
     </section>
     <section class="studio-design">
       <h3 class="heading">Оформление фотостудии</h3>
       <div class="studio-design__wrap">
-        <video class="studio-design__video" width="1440" height="674" controls="controls">
+        <video class="studio-design__video" width="375" height="375" controls="controls">
           <source src="video/video.mp4" type="video/mp4">
           Тег video не поддерживается вашим браузером.
          </video>
@@ -216,9 +245,463 @@
         </div>
       </div>
     </section>
-    <section class="price">
+    <section class="gallery">
+        <h3 class="heading">Виды услуг</h3>
+          <ul class="gallery__list">
+            <li class="gallery__item gallery__item--1">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-1.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-1.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-1.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-1.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-1.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-1.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-1.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-1.jpg" srcset="img/gallery-mobile-1.webp" alt="Фотосессия Лав Стори"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> Лав Стори</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--2">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-2.avif" type="image/avif" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-2.avif" type="image/avif" width="273" height="490">
+                  <source srcset="img/gallery-mobile-2.avif" type="image/avif" width="180" height="323">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-2.webp" type="image/webp" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-2.webp" type="image/webp" width="273" height="490">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-2.jpg" type="image/jpg" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-2.jpg" type="image/jpg" width="273" height="490">
+                  <img class="gallery__img" src="img/gallery-mobile-2.jpg" srcset="img/gallery-mobile-2.webp" alt="Фотосессия для подростков"  width="180" height="323">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> для подростков</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--3">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-3.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-3.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-3.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-3.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-3.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-3.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-3.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-3.jpg" srcset="img/gallery-mobile-3.webp" alt="Фотосессия для парней"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> для парней</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--4">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-4.avif" type="image/avif" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-4.avif" type="image/avif" width="273" height="490">
+                  <source srcset="img/gallery-mobile-4.avif" type="image/avif" width="180" height="323">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-4.webp" type="image/webp" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-4.webp" type="image/webp" width="273" height="490">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-4.jpg" type="image/jpg" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-4.jpg" type="image/jpg" width="273" height="490">
+                  <img class="gallery__img" src="img/gallery-mobile-4.jpg" srcset="img/gallery-mobile-4.webp" alt="Групповая фотосессия"  width="180" height="323">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Групповая</span> фотосессия</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--5">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-5.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-5.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-5.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-5.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-5.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-5.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-5.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-5.jpg" srcset="img/gallery-mobile-5.webp" alt="Фотосессия Лукбук" width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description">Фотосессия Лукбук</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--6">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-6.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-6.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-6.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-6.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-6.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-6.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-6.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-6.jpg" srcset="img/gallery-mobile-6.webp" alt="Фотосессия с животными"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> с животными</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--7">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-7.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-7.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-7.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-7.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-7.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-7.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-7.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-7.jpg" srcset="img/gallery-mobile-7.webp" alt="Парная фотосессия"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description">Парная фотосессия</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--8">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-8.avif" type="image/avif" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-8.avif" type="image/avif" width="273" height="490">
+                  <source srcset="img/gallery-mobile-8.avif" type="image/avif" width="180" height="323">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-8.webp" type="image/webp" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-8.webp" type="image/webp" width="273" height="490">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-8.jpg" type="image/jpg" width="392" height="704">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-8.jpg" type="image/jpg" width="273" height="490">
+                  <img class="gallery__img" src="img/gallery-mobile-8.jpg" srcset="img/gallery-mobile-8.webp" alt="Семейная фотосессия"  width="180" height="323">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Семейная</span> фотосессия &#40;дети +14&#41;</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--9">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-9.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-9.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-9.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-9.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-9.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-9.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-9.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-9.jpg" srcset="img/gallery-mobile-9.webp" alt="Фотосессия для беременных"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> для беременных</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--10">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-10.avif" type="image/avif" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-10.avif" type="image/avif" width="273" height="233">
+                  <source srcset="img/gallery-mobile-10.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-10.webp" type="image/webp" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-10.webp" type="image/webp" width="273" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-10.jpg" type="image/jpg" width="392" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-10.jpg" type="image/jpg" width="273" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-11.jpg" srcset="img/gallery-mobile-10.webp" alt="Фотосессия «Деловой стиль»"  width="180" height="154">
+                </picture>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> &#171;Деловой стиль&#187;</p>
+              </a>
+            </li>
+            <li class="gallery__item gallery__item--11">
+              <a class="gallery__link" href="#gallery.html">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-11.avif" type="image/avif" width="815" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-11.avif" type="image/avif" width="568" height="233">
+                  <source srcset="img/gallery-mobile-11.avif" type="image/avif" width="180" height="154">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-11.webp" type="image/webp" width="815" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-11.webp" type="image/webp" width="568" height="233">
+                  <source media="(min-width: 1440px)" srcset="img/gallery-desktop-11.jpg" type="image/jpg" width="815" height="335">
+                  <source media="(min-width: 1024px)" srcset="img/gallery-tablet-11.jpg" type="image/jpg" width="568" height="233">
+                  <img class="gallery__img" src="img/gallery-mobile-10.jpg" srcset="img/gallery-mobile-11.webp" alt="Фотосессия для девушек"  width="180" height="154">
+                </picture>
+                <p class="gallery__img-description"><span class="gallery__img-description-first-line">Фотосессия</span> для девушек</p>
+              </a>
+            </li>
+          </ul>
+    </section>
+    <section class="stages-of-work">
       <div class="container">
-        <h3 class="title">Прайс</h3>
+        <h3 class="heading">Этапы работ</h3>
+        <ul class="stages-of-work__list">
+          <li class="stages-of-work__item">
+            <h5 class="stages-of-work__subtitle">Заявка</h5>
+            <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
+            <span class="stages-of-work__number">1</span>
+          </li>
+          <li class="stages-of-work__item">
+            <h5 class="stages-of-work__subtitle">Бронь</h5>
+            <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
+            <span class="stages-of-work__number">2</span>
+          </li>
+          <li class="stages-of-work__item">
+            <h5 class="stages-of-work__subtitle">Составление Технического задания</h5>
+            <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
+            <span class="stages-of-work__number">3</span>
+          </li>
+          <li class="stages-of-work__item">
+            <h5 class="stages-of-work__subtitle">Съёмка</h5>
+            <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
+            <span class="stages-of-work__number">4</span>
+          </li>
+          <li class="stages-of-work__item">
+            <h5 class="stages-of-work__subtitle">Готовые фото</h5>
+            <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
+            <span class="stages-of-work__number">5</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="presentation">
+      <div class="container container--mobile">
+        <h3 class="heading">Фотостудия для любых идейных фотоссесий</h3>
+        <div class="presentation__wrap">
+          <p class="presentation__text"><span class="presentation__one-line">Воплотите мечту с нашей фотостудией</span>
+            и приобретите красивые, уникальные, <span class="presentation__one-line">качественные фотографии, выбрав один</span>
+            из наших залов.
+          </p>
+
+          <p  class="presentation__text"><span class="presentation__one-line">А их, -на секундочку, -аж семь штук.</span>
+            Каждый наш зал оборудован интерьером
+            <span class="presentation__one-line">и профессиональным оборудованием,</span>
+            и подойдет для любой фотоссесии, а мы хотим рассказать вам о все подробнее.
+          </p>
+
+          <p class="presentation__text">Какие идеи можно воплотить?</p>
+
+          <h5 class="presentation__subtitle">Фотоссесия Love Story</h5>
+
+          <p class="presentation__text presentation__text--love-story">Мечтаете показать всему миру вашу историю
+            <span class="presentation__one-line">создания любви или хранить снимки</span>
+            в памятном альбоме, то это фотоссесия отлично подойдет вам. Расскажите вашу
+            <span class="presentation__one-line">историю с любимым человеком</span>
+            в фотографиях в необычном месте.
+          </p>
+
+          <h5 class="presentation__subtitle presentation__subtitle--family">Семейная фотоссесия</h5>
+
+          <p class="presentation__text presentation__text--rubric">Семья — это самое главное в жизни любого человека.
+            Хотите повесить<span class="points">&#160;&#46;&#46;&#46;</span><span class="continuation">фотографии
+              <span class="presentation__one-line">в вашем уютном доме, смотреть на них</span>
+              и испытывать прилив нежности, значит семейная фотоссесия в нашей фотостудии станет отличным вариантом.</span>
+          </p>
+          <div class="more-details">
+
+            <h5 class="presentation__subtitle">Фотоссесия для беременных девушек</h5>
+
+            <p class="presentation__text">
+              <span class="presentation__one-line">Желаете сохранить воспоминания</span>
+              о прекрасном времени в жизни каждой женщины? Наши локации помогут вам
+              организовать и воссоздать
+              <span class="presentation__one-line">в фотографиях любовь матери и еще</span>
+              не родившегося ребенка.
+            </p>
+
+            <h5 class="presentation__subtitle">Фотоссесия «Деловой стиль».</h5>
+
+            <p class="presentation__text">Вы не из тех, кто любит яркие чувства,
+              <span class="presentation__one-line">эмоции и считаете себя сдержанным.</span>
+              Вам нужны фотографии, где вы раскроетесь как профессионал, произведете впечатление как деловой человек.
+              Эта фотоссесия станет вашим правильным решением.
+            </p>
+
+          <h5 class="presentation__subtitle">Фотоссесия для девушек и парней.</h5>
+
+          <p class="presentation__text">Хочешь стать кем-то другим? Или, наоборот, показать свое «я»?
+            Фотоссесия для девушек или парней поможет воплотить любые идеи.
+          </p>
+
+          <p class="presentation__text">Помимо вышеперечисленного есть и другие стили фотоссесий.
+            Вы самостоятельно выбираете, а наши фотозалы помогают
+            <span class="presentation__one-line">вам и вдохновляют.</span>
+          </p>
+
+          <p class="presentation__text presentation__text--reference">Кстати, о них…</p>
+
+          <p class="presentation__text">Все семь фото локаций уникальные в своем роде. Мы пытались воссоздать непохожесть
+            <span class="presentation__one-line">на другие фотостудии не только в городе,</span>
+            но и во всей стране. Каждый зал отличается
+            <span class="presentation__one-line">от других по дизайнерскому решению</span>
+            и интерьеру. И каждый зал пропитан своим духом, стилем и видится для каждого нашего
+            <span class="presentation__one-line">посетителя по-разному.</span>
+            Светлые помещения помогут получить более качественные, яркие фотоснимки. Трендовая мебель и другие предметы интерьера можно
+            <span class="presentation__one-line">двигать и активно использовать</span>
+            в фотосъемках. Локации подойдут для любых людей и задач: блогеров и медийных личностей, обычных и счастливых семей, предпринимателей и подростков.
+            <span class="presentation__one-line">Что еще нужно знать о нас?</span>
+          </p>
+
+          <p class="presentation__text">Оборудование. Неотъемлемая часть любой фотостудии и нередко владельцы фотостудий
+            <span class="presentation__one-line">экономят на этой важной части.</span>
+            <span class="presentation__one-line">Мы используем все оборудование только</span>
+            от профессиональных продавцов, которые
+            <span class="presentation__one-line">уже не один год предлагают свои товары</span>
+            на мировом рынке. Вы найдете все что нужно
+            <span class="presentation__one-line">и необходимо для работы фотографов,</span>
+            для создания образов и света. Ведь именно от оборудования часто зависит качество получающихся фотоснимков.
+          </p>
+        </div>
+        <button class="presentation__button" type="button">Подробнее</button>
+        </div>
+      </div>
+    </section>
+    <section class="price">
+      <div class="container container--mobile">
+        <h3 class="heading">Стоимость фотосесии</h3>
+        <ul class="price__list">
+          <li class="price__item">
+            <article class="tariffs-card tariffs-card--1">
+              <div class="tariffs-card__wrap-top">
+                <h4 class="tariffs-card__title">Mini</h4>
+                <span class="tariffs-card__rate">2500 <span class="currency-symbol">&#8381;</span></span>
+                <span class="tariffs-card__location">&#47; 1 локация</span>
+                <div class="tariffs-card__description-wrap">
+                  <p class="tariffs-card__text">Длительность &#8212;
+                    <span class="tariffs-card__definition">30 минут</span>
+                  </p>
+                  <p class="tariffs-card__text">Исходники &#8212;
+                    <span class="tariffs-card__definition">До 100 штук</span>
+                  </p>
+                  <p class="tariffs-card__text">Ретушь &#8212;
+                    <span class="tariffs-card__definition">4 фото</span>
+                  </p>
+                  <p class="tariffs-card__text">Аренда фотостудии &#8212;
+                    <span class="tariffs-card__definition">Бесплатно</span>
+                  </p>
+                  <p class="tariffs-card__text">Любой образ</p>
+                </div>
+              </div>
+                <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
+                <ul class="tariffs-card__list">
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Помощь <br> в позировании</a>
+                  </li>
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Визажист <br> &plus; 2000 &#8381;</a>
+                  </li>
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                  </li>
+                </ul>
+                <div class="button-locations-open-form-wrap">
+                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                </div>
+            </article>
+          </li>
+          <li class="price__item">
+            <article class="tariffs-card tariffs-card--2">
+              <div class="tariffs-card__wrap-top">
+                <h4 class="tariffs-card__title">Standart</h4>
+                <span class="tariffs-card__rate">5000 <span class="currency-symbol">&#8381;</span></span>
+                <span class="tariffs-card__location">&#47; 2 локация</span>
+                <div class="tariffs-card__description-wrap">
+                  <p class="tariffs-card__text">Длительность &#8212;
+                    <span class="tariffs-card__definition">1 час 20 минут</span>
+                  </p>
+                  <p class="tariffs-card__text">Исходники &#8212;
+                    <span class="tariffs-card__definition">До 200 штук</span>
+                  </p>
+                  <p class="tariffs-card__text">Ретушь &#8212;
+                    <span class="tariffs-card__definition">8 фото</span>
+                  </p>
+                  <p class="tariffs-card__text">Аренда фотостудии &#8212;
+                    <span class="tariffs-card__definition">Бесплатно</span>
+                  </p>
+                  <p class="tariffs-card__text">Любой образ</p>
+                </div>
+              </div>
+                <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
+                <ul class="tariffs-card__list">
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Помощь <br> в позировании</a>
+                  </li>
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Визажист <br> &plus; 2000 &#8381;</a>
+                  </li>
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                  </li>
+                </ul>
+                <div class="button-locations-open-form-wrap">
+                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                </div>
+            </article>
+          </li>
+          <li class="price__item">
+            <article class="tariffs-card tariffs-card--3">
+              <div class="tariffs-card__wrap-top">
+                <h4 class="tariffs-card__title">Maxi</h4>
+                <span class="tariffs-card__rate">N <span class="currency-symbol">&#8381;</span></span>
+                <span class="tariffs-card__location">&#47; Максимальное количество локаций</span>
+                <div class="tariffs-card__description-wrap">
+                  <p class="tariffs-card__text">Длительность &#8212;
+                    <span class="tariffs-card__definition">4 часа</span>
+                  </p>
+                  <p class="tariffs-card__text">Исходники &#8212;
+                    <span class="tariffs-card__definition">До 500 штук</span>
+                  </p>
+                  <p class="tariffs-card__text">Ретушь &#8212;
+                    <span class="tariffs-card__definition">50 фото</span>
+                  </p>
+                  <p class="tariffs-card__text">Аренда фотостудии &#8212;
+                    <span class="tariffs-card__definition">Бесплатно</span>
+                  </p>
+                  <p class="tariffs-card__text tariffs-card__text--5">Визажист &#8212;
+                    <span class="tariffs-card__definition">Make-Up, Укладка</span>
+                  </p>
+                  <p class="tariffs-card__text">Предварительный подбор образов &#8212;
+                    <span class="tariffs-card__definition">До 8 образов</span>
+                  </p>
+                </div>
+              </div>
+                <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
+                <ul class="tariffs-card__list">
+                  <li class="tariffs-card__item">
+                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                  </li>
+                </ul>
+                <div class="button-locations-open-form-wrap">
+                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="presentation photo-trend">
+      <div class="container">
+        <h3 class="heading">Фотоискусство в тренде. Любая фотоссесия ваша история</h3>
+        <div class="presentation__wrap">
+          <p class="presentation__text">Мы искренни так считаем и готовы кричать эту фразу на весь мир.
+            Фотографии давно перестали пылиться на полках в семейных, потрёпанных альбомах.</p>
+
+          <p class="presentation__text">Хотите самовыразиться и не знаете как? Позвоните нам и закажите фотосъемку.
+            Хотите удивить и впечатлить? Мы вам поможем. Не уверены? Посмотрите отзывы и проконсультируйтесь.
+            Боитесь фотографироваться? Наши локации помогут вам расслабиться и почувствовать себя как дома.</p>
+
+          <p class="presentation__text">Доступные цены для всех и вежливость.</p>
+
+          <p class="presentation__text">Повторим еще раз: мы работаем в первую очередь для клиентов, и аренда нашей
+            фотостудии имеют цены семи чашек кофе. Вы можете расплатится любым удобным
+            для вас способом: наличным или безналичным<span class="points">&#160;&#46;&#46;&#46;</span>
+            <span class="continuation">расчетом. Все для вашего удобства.</span></p>
+          <div class="more-details">
+            <p class="presentation__text">Вежливость тоже относиться к главным нашим качествам. У нас вы не найдете ужасного
+              обращения, мы всегда готовы ответить вам и проконсультировать, помочь и стать вашими друзьями. Все наши работники
+              улыбчивы и приветливы вам, которые не оставят вам плохого настроения.</p>
+
+            <p class="presentation__text">В  каждом городе есть хотя бы несколько фотостудий и часто поход туда, становиться чуть
+              ли не традицией семьи, пар или друзей. Тренд на истории в фотографиях для социальных сетей, где мы проводим много
+              времени, не угасал и не угаснет никогда. Фотоссесия лав стори или семейная привлекает внимание всех людей и,
+              доказано, набирает больше всего одобрений со стороны людей всего мира. Для качественного исполнения вашей мечты
+              стоит обращаться к профессионалу и выбирать интересные локации.</p>
+
+            <p class="presentation__text">Наша фотостудия предлагает и то, и то. Профессиональный фотограф сможет сделать качественные,
+              интересные фотографии, помочь вам воплотить вашу идею в жизнь в уютных залах фотостудии.</p>
+
+            <p class="presentation__text">На ваш выбор у нас есть 7 фотозалов, каждый из которых прекрасен и индивидуален
+              по-своему. В больших залах отлично будет смотреться групповая фотосессия, а в залах меньше получиться интересная
+              фотоссесия в деловом стиле.</p>
+
+            <p class="presentation__text">Мы работаем в первую очередь на качество, поэтому наши цены не завышенные
+              и доступны всем желающим. У нас есть различные и удобные способы оплаты для вас.</p>
+          </div>
+          <button class="presentation__button" type="button">Подробнее</button>
+        </div>
       </div>
     </section>
     <section class="contacts">

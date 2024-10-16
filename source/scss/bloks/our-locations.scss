@@ -11,22 +11,16 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 22px;
+    top: 0;
     left: 0;
     right: 0;
     background-image: url("../img/backgroumd-line-locations.png");
     background-repeat: no-repeat;
-    transform: rotateX(11deg);
+    opacity: 0.2;
+    transform: rotate(-0.11deg);
   }
-}
 
-.open-form-our-locations-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.open-form-our-locations {
-  padding: 14px 54px;
-  margin: 0 auto;
-
+  & .heading {
+    margin-bottom: 34px;
+  }
 }

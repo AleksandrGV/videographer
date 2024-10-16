@@ -1,4 +1,12 @@
 // Шрифты
+@font-face {
+  font-family: Arial-Bold;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Arial-Bold.woff2") format("woff2"),
+  url("../fonts/Arial-Bold.woff") format("woff");
+  font-display: swap;
+}
 
 @font-face {
   font-family: Montserrat;

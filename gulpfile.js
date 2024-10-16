@@ -154,8 +154,8 @@ const copy = () => {
   return src([
     'source/*.html',
     'source/css/style.min.css',
-    'source/img/*.{jpg,png,avif,webp}',
-    'source/img/sprite.svg',
+    'source/img/*.{jpg,png,avif,webp,svg}',
+    // 'source/img/sprite.svg',
     'source/js/script.min.js',
     'source/fonts/*.*',
   ], {

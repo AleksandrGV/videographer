@@ -379,17 +379,40 @@ img {
   width: 36px;
   height: 36px;
   background-color: #FFFFFF;
-  background-image: url("../img/arrow.svg");
-  background-size: 10px 21px;
-  background-position: 40%;
-  background-repeat: no-repeat;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   border: none;
+  position: relative;
 }
 .control-right {
   rotate: 180deg;
+}
+.control::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 4px solid #E97522;
+  border-right: none;
+  border-top: none;
+  border-radius: 3px;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  rotate: 45deg;
+}
+.control:hover {
+  background-color: #C1C1C1;
+  opacity: 0.8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider-control--reviews {
+  -webkit-column-gap: 76%;
+     -moz-column-gap: 76%;
+          column-gap: 76%;
+  top: 49.5%;
 }
 
 .dots {
@@ -525,11 +548,12 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
+  z-index: 1;
 }
 .our-works-slider__item.active {
   width: 236px;
   height: 262px;
-  z-index: 2;
+  z-index: 5;
   -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -568,6 +592,18 @@ img {
   height: 272px;
 }
 
+.reviews-slider {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.reviews-slider__list {
+  min-width: 844px;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
 .studio-design {
   width: 100%;
   padding-top: 30px;
@@ -603,17 +639,16 @@ img {
   position: absolute;
 }
 .studio-design__button-play {
-  width: 40px;
-  height: 40px;
+  width: 0;
+  height: 0;
   position: absolute;
-  top: 45%;
-  left: 46%;
+  top: 44.5%;
+  left: 46.5%;
   background: none;
-  background-image: url("../img/icon-play.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   border: none;
+  border-top: 20px solid transparent;
+  border-left: 36px solid #D8D8D8;
+  border-bottom: 20px solid transparent;
   cursor: pointer;
 }
 
@@ -1064,6 +1099,7 @@ img {
 
 .gift-certificate {
   padding-top: 24px;
+  margin-bottom: 14px;
   position: relative;
   overflow: hidden;
 }
@@ -1080,6 +1116,7 @@ img {
 }
 
 .gift-certificate-card {
+  max-width: 343px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1180,9 +1217,93 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 .gift-certificate-card .about-us__open-form {
   width: 100%;
   margin-left: 3px;
   margin-right: 3px;
+}
+
+.reviews {
+  padding-top: 13px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.button-reviews-open-form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 21px;
+  margin-left: 17px;
+  margin-right: 17px;
+}
+
+.button-reviews-open-form {
+  width: 100%;
+}
+
+.reviews-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.reviews-card__img-wrap {
+  width: 100%;
+  padding-left: 65px;
+  padding-right: 65px;
+}
+.reviews-card__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.reviews-card__title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #4A4A4A;
+  margin-top: 14px;
+  margin-bottom: 1px;
+}
+.reviews-card__text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 8px;
+}
+.reviews-card__link {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #E97522;
+  text-decoration: none;
 }

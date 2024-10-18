@@ -29,17 +29,16 @@
   }
 
   &__button-play {
-    width: 40px;
-    height: 40px;
+    width: 0;
+    height: 0;
     position: absolute;
-    top: 45%;
-    left: 46%;
+    top: 44.5%;
+    left: 46.5%;
     background: none;
-    background-image: url("../img/icon-play.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
     border: none;
+    border-top: 20px solid transparent;
+    border-left: 36px solid $light-gray-play;
+    border-bottom: 20px solid transparent;
     cursor: pointer;
   }
 }

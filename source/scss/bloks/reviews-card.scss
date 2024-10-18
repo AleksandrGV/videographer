@@ -1,0 +1,51 @@
+.reviews-card {
+    // max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__img-wrap {
+      width: 100%;
+      padding-left: 65px;
+      padding-right: 65px;
+    }
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 24px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+
+    &__title {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 24px;
+      color: $wet-asphalt;
+      margin-top: 14px;
+      margin-bottom: 1px;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: $signal-black;
+      margin-bottom: 8px;
+    }
+
+    &__link {
+      display: block;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: $rich-orange;
+      text-decoration: none;
+    }
+
+}

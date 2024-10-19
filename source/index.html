@@ -26,7 +26,7 @@
         </a>
         <nav class="menu menu--closed">
           <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-          <ul class="menu__list">
+          <ul class="menu__list menu__list--header">
             <li class="menu__item"><a class="menu__link menu__link--active" href="#potrfolio" >Портфолио</a></li>
             <li class="menu__item"><a class="menu__link" href="#type-of-work">Виды работ</a></li>
             <li class="menu__item"><a class="menu__link" href="#about-photo-studio" >О фотостудии</a></li>
@@ -766,7 +766,7 @@
                   <h3 class="reviews-card__title">Мария</h3>
                   <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
                     Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <a class="reviews-card__link" href="#">Показать ещё</a>
+                    <button class="reviews-card__button" type="button">Показать ещё</button>
                 </div>
               </article>
             </li>
@@ -790,7 +790,7 @@
                   <h3 class="reviews-card__title">Сергей</h3>
                   <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
                     Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <a class="reviews-card__link" href="#">Показать ещё</a>
+                    <button class="reviews-card__button" type="button">Показать ещё</button>
                 </div>
               </article>
             </li>
@@ -819,7 +819,7 @@
                   <h3 class="reviews-card__title">Сергей</h3>
                   <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
                     Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <a class="reviews-card__link" href="#">Показать ещё</a>
+                    <button class="reviews-card__button" type="button">Показать ещё</button>
                 </div>
               </article>
             </li>
@@ -842,9 +842,81 @@
         </div>
       </div>
     </section>
+    <section class="contacts">
+      <div class="container container--mobile">
+        <h3 class="visually-hidden">Контакты</h3>
+        <div class="contacts__maps">
+          <a class="contacts__link" href="#">
+            <img class="contacts__img" src="img/card-address-mobile.png" alt="Карта месторасположения">
+          </a>
+          <div class="contacts__wrap">
+            <article class="contacts-card">
+              <h4 class="visually-hidden">Карта с контактами</h4>
+              <ul class="contacts-card__list">
+                <li class="contacts-card__item">
+                  <a class="contacts-card__link" href="#index.html">
+                    <img class="contacts-card__logo" src="img/logo-contacts.svg" alt="Логотип Add Photo"  width="113" height="35">
+                  </a>
+                </li>
+                <li class="contacts-card__item">
+                  <a class="contacts-card__link header__call-back-phone" href="+7(499)3446091">+7 (499) 344 60 91</a>
+                </li>
+                <li class="contacts-card__item">
+                  <a class="contacts-card__link contacts__link--email" href="mailto:content@addmarkets.ru">content@addmarkets.ru</a>
+                </li>
+                <li class="contacts-card__item">
+                  <p class="contacts-card__text">
+                    Режим работы&#58;
+                    <span class="contacts-card__info">Пн&#8208;Пт</span>
+                    <span class="contacts-card__info">09&#58;00 &#8208; 18&#58;00</span>
+                  </p>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div class="contacts__form-wrap">
+          <article class="contacts-form-card">
+            <h3 class="contacts-form-card__title">Форма обратной связи</h3>
+            <form class="contacts-form" action="#" method="post">
+              <ul class="contacts-form-card__list">
+                <li class="contacts-form-card__item">
+                  <label class="contacts-form-card__label" for="field-name">Имя</label>
+                  <input class="contacts-form-card__input" type="text" id="field-name" name="name" placeholder="Введите ваше имя">
+                </li>
+                <li class="contacts-form-card__item">
+                  <label class="contacts-form-card__label" for="field-email">E-mail</label>
+                  <input class="contacts-form-card__input" type="email" id="field-email" name="email" placeholder="Введите ваш E-mail">
+                </li>
+                <li class="contacts-form-card__item">
+                  <label class="contacts-form-card__label" for="field-phone">Телефон</label>
+                  <input class="contacts-form-card__input" type="tel" id="field-phone" name="phone" placeholder="Введите ваше Телефон">
+                </li>
+              </ul>
+              <button class="button contacts-form-card__button" type="submit">Отправить</button>
+                <p class="contacts-form-card__text">
+                  Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с
+                  <a class="contacts-form-card__link" href="#">политикой конфиденциальности</a>
+                </p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="page__footer">
-
+    <div class="container">
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a class="menu__link menu__link--active" href="#potrfolio" >Портфолио</a></li>
+          <li class="menu__item"><a class="menu__link" href="#type-of-work">Виды работ</a></li>
+          <li class="menu__item"><a class="menu__link" href="#about-photo-studio" >О фотостудии</a></li>
+          <li class="menu__item menu__item-mobile"><a class="menu__link" href="#reviews" >Отзывы</a></li>
+          <li class="menu__item menu__item-desktop"><a class="menu__link" href="#services-and-prices" >Услуги и цены</a></li>
+          <li class="menu__item"><a class="menu__link" href="#contacts" >Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
   </footer>
   <script src="js/script.min.js"></script>
   </body>

@@ -38,14 +38,15 @@
       margin-bottom: 8px;
     }
 
-    &__link {
-      display: block;
+    &__button {
       font-weight: 600;
-      font-size: 14px;
+      font-size: 15px;
       line-height: 24px;
       text-align: center;
       color: $rich-orange;
       text-decoration: none;
+      background: none;
+      border: none;
     }
 
 }

@@ -1,0 +1,33 @@
+.contacts {
+  max-width: 372px;
+  padding-top: 35px;
+  margin-bottom: 53px;
+  position: relative;
+
+  &__maps {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  &__img {
+    width: 340px;
+    height: 541px;
+    box-sizing: border-box;
+    border: 5px solid $grideperleft;
+    filter: drop-shadow(0px 2.69px 1.65px rgba($grey, 0.2));
+    border-radius: 15px;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 185px;
+    left: 69px;
+  }
+
+  &__form-wrap {
+    max-width: 320px;
+    position: relative;
+    top: -54px;
+    left: 15px;
+  }
+}

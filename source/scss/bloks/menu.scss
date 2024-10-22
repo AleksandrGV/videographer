@@ -1,11 +1,9 @@
 .menu {
-  width: auto;
   position: relative;
   order: 2;
 
   &__list {
     width: 375px;
-    height: 527px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -14,6 +12,7 @@
     @include list-reset();
     padding-top: 8px;
     padding-right: 6px;
+    padding-bottom: 340px;
 
     &--header {
       position: absolute;
@@ -39,7 +38,6 @@
     order: 5;
   }
 
-
   &__link {
   color: $white;
   font-size: 14px;
@@ -48,13 +46,14 @@
   padding: 5px 10px;
   text-decoration: none;
 
-    &--active {
+    &:active {
       color: $rich-orange;
+      opacity: 1;
     }
 
     &:hover {
-      color: $signal-black;
-      transition: 1s;
+      opacity: 0.7;
+      transition: 0.5s;
     }
   }
 }
@@ -66,10 +65,13 @@
   position: absolute;
   border: none;
   cursor: pointer;
-  // transition: 2s;
 
   &:hover {
     opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }
 
@@ -91,14 +93,16 @@
 }
 
 .menu--closed .menu__list {
-  display: none;
-  // animation-duration: 5s;
-  // animation-name: menuAnimate;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate(-20px, -10px);
 }
 
 .menu--open .menu__toggle {
   top: -17px;
   right: 2px;
+  transition: top 1s ease-out .5s;
+
 
   &::after,
   &::before {
@@ -121,17 +125,47 @@
   }
 }
 
-// @keyframes menuAnimate {
-//   from {
-//     height: 527px;
-//   }
-//   to {
-//     height: 0;
-//   }
-// }
+//Стили для меню footer
+.menu {
+  &--footer {
+    margin-top: 32px;
+    margin-bottom: 24px;
 
+    .menu__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 10px;
+      background: none;
+      padding-left: 35px;
+      padding-right: 30px;
+      padding-bottom: 10px;
 
+      .menu__item {
+        justify-self: center;
 
+        &:nth-child(2) {
+          order: inherit;
+        }
+
+        &:nth-child(4) {
+          order: 1;
+        }
+      }
+
+      .menu__link {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        color: $wet-asphalt;
+
+        &:active {
+          color: $rich-orange;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
 
 
 

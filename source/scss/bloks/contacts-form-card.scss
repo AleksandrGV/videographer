@@ -42,53 +42,6 @@
     line-height: 120%;
   }
 
-  &__list {
-    @include list-reset();
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 12px;
-    margin-bottom: 31px;
-  }
-
-  &__item {
-    width: 280px;
-    display: flex;
-    flex-direction: column;
-    row-gap: 7px;
-  }
-
-  &__label {
-    line-height: 12px;
-    color: $dark-purple-blue;
-    opacity: 0.4;
-  }
-
-  &__input {
-    padding: 16px;
-    background-color: $white;
-    border: 1px solid $very-pale-blue;
-    border-radius: 5px;
-
-    &::placeholder {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 12px;
-      color: $light-gray;
-      opacity: 0.4;
-    }
-  }
-
-  &__button {
-    width: 280px;
-    border: none;
-    font-size: 16px;
-    letter-spacing: 4px;
-    padding: 14px;
-    margin-bottom: 4px;
-  }
-
   &__text {
     font-size: 12px;
     line-height: 16px;
@@ -99,11 +52,4 @@
   &__link {
     color: $signal-black;
   }
-}
-
-.contacts-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }

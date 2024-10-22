@@ -21,10 +21,6 @@
     &__text {
       display: none;
     }
-
-    &__open-form {
-      margin-left: 7px;
-    }
   }
 
 .line-second {
@@ -33,6 +29,10 @@
 
 .button {
   @include button();
+
+  &--open-form {
+    margin-left: 7px;
+  }
 }
 
 // .about-us__wrap {

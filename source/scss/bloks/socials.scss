@@ -1,0 +1,20 @@
+.socials {
+  display: flex;
+  column-gap: 23px;
+  @include list-reset();
+
+  &__link {
+    display: flex;
+  }
+
+  &__link:hover &__img path {
+    fill: $very-pale-blue;
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+
+  &__link:active &__img path {
+    fill: $rich-orange;
+    opacity: 1;
+  }
+}

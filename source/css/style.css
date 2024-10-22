@@ -58,6 +58,7 @@ img {
 /* Animations */
 .container {
   width: 100%;
+  display: grid;
   max-width: 1480px;
   padding: 10px 20px;
   margin: 0 auto;
@@ -1181,6 +1182,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-self: center;
   background-color: #F9F4EE;
   border-radius: 25px;
   padding-top: 23px;
@@ -1363,7 +1365,7 @@ img {
 .contacts {
   max-width: 372px;
   padding-top: 35px;
-  margin-bottom: 60px;
+  margin: 0 auto 60px;
   position: relative;
 }
 .contacts__maps {
@@ -1593,6 +1595,12 @@ img {
   line-height: 12px;
   color: #B1B1B1;
   opacity: 0.4;
+}
+.contacts-form__input:focus {
+  border-color: #C1C1C1;
+}
+.contacts-form__input:focus-visible {
+  outline-color: #999999;
 }
 .contacts-form__button {
   width: 280px;
@@ -1829,4 +1837,65 @@ img {
 }
 .button-close:hover {
   opacity: 0.6;
+}
+
+.successful-sending {
+  width: 337px;
+  height: 331px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../img/bg-successful-sending.png");
+  position: relative;
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.successful-sending--show {
+  visibility: visible;
+  opacity: 1;
+}
+@keyframes bounce {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.successful-sending__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.successful-sending__title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 120%;
+}
+.successful-sending__text {
+  line-height: 22px;
+  color: #121621;
+  opacity: 0.4;
 }

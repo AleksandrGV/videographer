@@ -1,0 +1,44 @@
+.successful-sending {
+  width: 337px;
+  height: 331px;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/bg-successful-sending.png");
+  position: relative;
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 2s ease-in-out;
+
+  &--show {
+    visibility: visible;
+    opacity: 1;
+    @include animation-mixin(bounce);
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  &__text {
+    line-height: 22px;
+    color: $dark-purple-blue;
+    opacity: 0.4;
+
+  }
+
+
+
+}

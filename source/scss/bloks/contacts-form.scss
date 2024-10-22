@@ -41,13 +41,13 @@
       opacity: 0.4;
     }
 
-    // &:focus {
-    //   border-color: $silver;
-    // }
+    &:focus {
+      border-color: $silver;
+    }
 
-    // &:focus-visible {
-    //   outline-color: $pearlescent-light-gray;
-    // }
+    &:focus-visible {
+      outline-color: $pearlescent-light-gray;
+    }
   }
 
   &__button {

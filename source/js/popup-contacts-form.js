@@ -4,9 +4,10 @@
 const popupOpacity = document.querySelector('.popup-opacity');
 const popupContactsForm = document.querySelector('.popup-contacts-form');
 const buttonOpenForm = document.querySelectorAll('.button--open-form');
+const popupSuccessfulSending = document.querySelector('.successful-sending');
 
 /*Ищем подходящий селектор в форме*/
-const popupClose = popupContactsForm.querySelector(".button-close");
+const popupClose = popupContactsForm.querySelectorAll('.button-close');
 const formFeedback = popupContactsForm.querySelector('.contacts-form');
 const nameField = popupContactsForm.querySelector('.contacts-form__input--name');
 const emailField = popupContactsForm.querySelector('.contacts-form__input--email');
@@ -45,32 +46,32 @@ for (let i = 0; i < buttonOpenForm.length; i++) {
 };
 
   /*Обработчик событий для закрытия формы*/
-
-  popupClose.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    popupContactsForm.classList.remove('popup-contacts-form--show');
-    // popupContactsForm.classList.remove('popup-form--error');
-    popupOpacity.classList.remove('popup-opacity--show');
-  });
-
-  // /*Повесим обработчик отправки данных на форму и отменим его. */
-
-  formFeedback.addEventListener('submit', function(evt) {
-    if(!nameField.value || !emailField.value) {
+  for (let i = 0; i < popupClose.length; i++) {
+    popupClose[i].addEventListener('click', function(evt) {
       evt.preventDefault();
-      popupContactsForm.classList.remove("popup-form-error");
-      popupContactsForm.offsetWidth = popupContactsForm.offsetWidth;
-      popupContactsForm.classList.add("popup-form-error");
-    } else {
-      if (isStorageSupport) {
-        console.log(localStorage.setItem('name', nameField.value));
+      popupContactsForm.classList.remove('popup-contacts-form--show');
+      popupSuccessfulSending.classList.remove('successful-sending--show');
+      // popupContactsForm.classList.remove('popup-form--error');
+      popupOpacity.classList.remove('popup-opacity--show');
+    });
+
+    // /*Повесим обработчик отправки данных на форму и отменим его. */
+    formFeedback.addEventListener('submit', function(evt) {
+      if(!nameField.value || !emailField.value) {
+        evt.preventDefault();
+        popupContactsForm.classList.remove("popup-form-error");
+        popupContactsForm.offsetWidth = popupContactsForm.offsetWidth;
+        popupContactsForm.classList.add("popup-form-error");
+      } else {
+        if (isStorageSupport) {
+          console.log(localStorage.setItem('name', nameField.value));
+        }
       }
-    }
-  });
+    });
+  };
 
   /*Добавим обработчик события, который будет отлавливать
   нажатие кнопки Esc и в случае, если модальное окно открыто, закрывать его.*/
-
   window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
       if (popupContactsForm.classList.contains('popup-contacts-form--show') || popupOpacity.classList.contains('popup-opacity--show')) {

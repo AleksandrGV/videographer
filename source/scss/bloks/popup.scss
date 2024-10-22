@@ -1,0 +1,20 @@
+// Стили для popup
+
+.popup-opacity {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba($silver, 0.7);
+  position: fixed;
+  z-index: 20;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+
+
+  &--show {
+    visibility: visible;
+    opacity: 1;
+  }
+}

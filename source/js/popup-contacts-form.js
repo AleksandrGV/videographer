@@ -34,13 +34,13 @@ for (let i = 0; i < buttonOpenForm.length; i++) {
     } else {
       popupOpacity.classList.remove('popup-opacity--show');
     }
-    // if(storage) {
-    //   nameField.value = storage;
-    //   emailField.focus();
-    //  } else {
-    // /*Установим фокус при открытии модального окна в поле ввода логина. */
-    //   nameField.focus();
-    // }
+    if(storage) {
+      nameField.value = storage;
+      emailField.focus();
+     } else {
+    /*Установим фокус при открытии модального окна в поле ввода логина. */
+      nameField.focus();
+    }
   });
 };
 

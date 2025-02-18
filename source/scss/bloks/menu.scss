@@ -132,12 +132,13 @@
     margin-bottom: 24px;
 
     .menu__list {
+      width: 100%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px 10px;
       background: none;
-      padding-left: 35px;
-      padding-right: 30px;
+      padding-left: 17px;
+      padding-right: 10px;
       padding-bottom: 10px;
 
       .menu__item {

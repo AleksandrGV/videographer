@@ -1,0 +1,49 @@
+//Общие стили для слайдера
+.slider-our-locations {
+  max-width: 1240px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  // display: flex;
+  // align-items: center;
+  // flex-direction: column;
+  position: relative;
+  z-index: 5;
+
+  &__list {
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  column-gap: 20px;
+  align-items: center;
+  @include list-reset;
+  position: relative;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+    &.no-transition {
+      scroll-behavior: auto;
+    }
+
+    & :where(.slider__item, .slider-our-locations__link) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+&__item {
+    scroll-snap-align: start;
+  }
+
+  &__img {
+    width: 310px;
+    height: 272px;
+    display: block;
+  }
+}
+

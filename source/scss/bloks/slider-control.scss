@@ -2,6 +2,7 @@
 
 .slider-control {
   width: 100%;
+  height: 36px;
   display: flex;
   justify-content: center;
   column-gap: 72%;
@@ -25,7 +26,7 @@
   border: none;
   position: relative;
 
-  &-right {
+  &--right {
     rotate: 180deg;
   }
 
@@ -48,6 +49,14 @@
     opacity: 0.8;
     transition: 0.5s;
   }
+}
+
+// Расположение стрелок для блока наши локации
+
+.slider-our-locations .slider-control {
+  column-gap: 76%;
+  top: 50%;
+  transform: translateY(-62%);
 }
 
 

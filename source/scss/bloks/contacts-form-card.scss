@@ -53,3 +53,34 @@
     color: $signal-black;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .contacts-form-card {
+    padding-top: 45px;
+    padding-bottom: 74px;
+
+    &::after {
+      width: 120px;
+      height: 210px;
+      background-image: url("../img/bg-bals-form-tablet.png");
+    }
+
+    &::before {
+      bottom: -192px;
+      left: -152px;
+    }
+
+    & .one-line-tablet {
+      display: block;
+    }
+
+    &__title {
+      font-size: 30px;
+      margin-bottom: 33px;
+    }
+
+    &__text {
+      margin: 0 58px;
+    }
+  }
+}

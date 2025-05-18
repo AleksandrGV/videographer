@@ -9,6 +9,7 @@
   }
 
   &__wrap {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +17,7 @@
     line-height: 140%;
     padding-left: 6px;
     padding-right: 6px;
+    margin: 0 auto;
   }
 
   &__subtitle {
@@ -98,9 +100,20 @@
 
 }
 
+.dot-tablet {
+  display: none;
+}
+
+.points,
 .more-details,
 .continuation {
-  display: none;
+  transition: max-height 1s ease-in-out;
+  overflow-y: hidden;
+}
+
+.more-details,
+.continuation {
+  max-height: 0;
 }
 
 .more-details {
@@ -108,4 +121,74 @@
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+}
+
+
+@media screen and (min-width: 1024px) {
+  .presentation {
+    margin-bottom: 31px;
+
+    & .heading {
+      margin-bottom: 14px;
+    }
+
+    &__wrap {
+      max-width: 100%;
+      align-items: flex-start;
+      margin: 0 59px 0 64px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+
+      &:first-child {
+        margin-bottom: 1px;
+      }
+
+      &:nth-child(2) {
+        margin-top: 1px;
+        line-height: 24px;
+        margin-right: 40px;
+
+        & .one-line:first-child,
+        & .one-line-tablet {
+          display: block;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-bottom: 16px;
+      }
+
+      &--love-story {
+        margin-top: 21px;
+      }
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      margin-left: 9px;
+
+      &::after {
+        left: -8px;
+      }
+    }
+
+    .dot-tablet {
+      display: inline;
+    }
+
+    .hidden-tablet {
+      display: none;
+    }
+
+    &__button {
+      font-size: 16px;
+      margin-top: 4px;
+      margin-left: auto;
+      margin-bottom: 5px;
+    }
+  }
 }

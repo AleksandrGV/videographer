@@ -1,0 +1,158 @@
+.popup-locations-form {
+    width: 338px;
+    height: 571px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    background-color: #ffffff;
+    transition: all 2s ease-in-out;
+    padding-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+
+    &--show {
+      visibility: visible;
+      opacity: 1;
+    }
+    
+    &__title {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 120%;
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+  .popup-locations-form {
+    width: 840px;
+    height: 565px;
+    flex-direction: row;
+    column-gap: 10px;
+    
+      &__img {
+        width: 650px;
+      }
+      
+      &__wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .popup-locations-form {
+    width: 1033px;
+    height: 648px;
+    
+      &__title {
+        font-size: 34px;
+      }
+  }
+}
+
+/* Popup slider locations */
+
+.popup-locations {
+  width: 98%;
+  max-width: 1412px;
+  height: min-content;
+  position: relative;
+  top: 22px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 50px 10px;
+
+  /* Стили для попап локаций */
+  &--show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__slider {
+    width: 100%;
+    overflow: hidden;
+  }
+    
+  &__list {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    width: 251px;
+    height: 358px;
+    object-fit: cover;
+  }
+
+  &-control {
+    left: 0;
+    right: 0;
+    column-gap: 75%;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 540px) {
+  .popup-locations {
+    &__img {
+      width: 420px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popup-locations {
+    padding: 60px 30px 30px;
+    
+    &__img {
+      width: 771px;
+      height: 650px;
+    }
+  
+    &-control {
+      column-gap: 79%;
+      top: 45%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .popup-locations {
+
+    &__img {
+      height: 800px;
+    }
+
+    &__text {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+  }
+}
+
+  

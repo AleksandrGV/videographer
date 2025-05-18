@@ -1,3 +1,5 @@
+//Slider our locations
+
 const sliderWrapper = document.querySelector('.slider-our-locations');
 const sliderOurLocations = document.querySelector('.slider-our-locations__list');
 const firstCardWidth = sliderOurLocations.querySelector('.slider-our-locations__item').offsetWidth;

@@ -1,0 +1,337 @@
+.reviews-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 5px;
+        margin-bottom: -50px;
+    }
+
+    &__item {
+        width: 280px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+    }
+
+    &__label {
+        line-height: 12px;
+        color: #121621;
+        opacity: 0.4;
+    }
+
+    &__input,
+    &__comment {
+        background-color: #FFFFFF;
+        border: 2px solid #DDDEE4;
+        border-radius: 5px;
+        padding: 5px 12px;
+    }
+
+    &__comment {
+        min-height: 46px;
+        color: #B1B1B1;
+        border-bottom: none;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        resize: none;
+    }
+
+    &__comment::placeholder {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 12px;
+        /* opacity: 0.4; */
+    }
+
+    &__comment:focus-visible {
+        width: 278px;
+        outline-color: #676666;
+        margin-left: 1px;
+    }
+
+    /* Загрузки файлов */
+
+    &__item--btn {
+        width: 38px !important;
+        height: 38px;
+        align-self: flex-end;
+        position: relative;
+        top: -64px;
+        right: 8px;
+        overflow: hidden;
+        border-radius: 5px;
+        background-image: url(../img/icon-photo.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__btn {
+        width: 38px;
+        height: 38px;
+        filter: alpha(opacity=1);
+        opacity: 0.01;
+        cursor: pointer;
+        font-size: 1px;
+        padding: 15px 3px;
+        position: relative;
+    }
+}
+
+
+
+/* ИИ */
+
+/* Контейнер для превью */
+.preview-container {
+    min-height: 50px;
+    border: 2px solid #DDDEE4;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    top: -12px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: #ffffff;
+    background-color: #ffffff;
+}
+
+/* Секции превью */
+.preview-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 50px 5px 10px;
+    box-sizing: border-box;
+}
+
+.top-section {
+    min-height: 25px; /* Высота верхней секции */
+    align-items: flex-end; /* Выравнивание по нижнему краю */
+  }
+
+  .bottom-section {
+    min-height: 25px; /* Высота нижней секции */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    flex-wrap: wrap;
+  }
+
+  /* Плейсхолдер когда нет изображений */
+  .preview-placeholder {
+      line-height: 14px;
+      position: absolute;
+      top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: #888;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 35px;
+}
+
+/* Стили для элементов превью */
+.preview-item {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+  .preview-item img {
+    display: block;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+/* Размеры для разных случаев */
+.preview-item.single {
+    width: 215px;
+    height: 184px;
+}
+
+.preview-item.double {
+    width: 100px;
+    height: 86px;
+}
+
+/* Кнопка удаления */
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e5e5e5;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.remove-btn::before, .remove-btn::after {
+    content: "";
+    width: 23px;
+    height: 2px;
+    position: absolute;
+    top: 13px;
+    right: 2px;
+    background-color: #9e9e9e;
+}
+.remove-btn::before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.remove-btn::after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.remove-btn:hover {
+    background-color: #E97522;
+    opacity: 1;
+}
+
+/* Прелоадер */
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.loader__spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1.5s linear infinite;
+}
+
+.loader__text {
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.reviews-form__button {
+    width: 100%;
+    z-index: 5;
+    border: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .reviews-form {
+        padding: 0 26px;
+
+        &__list {
+            row-gap: 12px;
+        }
+
+        &__item {
+            width: 374px;
+            row-gap: 6px;
+        }
+
+        &__input {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        &__comment:focus-visible {
+            width: 372px;
+        }
+
+        &__item--btn {
+            top: -72px;
+        }
+
+        .preview-container {
+            min-height: 140px;
+            top: -20px;
+        }
+
+        .preview-item.single {
+            width: 310px;
+            height: 310px;
+        }
+
+        .preview-item.double {
+            width: 150px;
+            height: 129px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .reviews-form {
+        padding: 0 74px;
+
+        &__list {
+            row-gap: 18px;
+            margin-bottom: -46px;
+        }
+
+        &__item {
+            width: 420px;
+            row-gap: 8px;
+
+            &--btn {
+                top: -86px;
+            }
+        }
+
+
+        &__input {
+            padding-top: 14px;
+            padding-bottom: 15px;
+        }
+
+        &__comment:focus-visible {
+            width: 372px;
+        }
+    }
+
+    .preview-section {
+        padding-top: 10px;
+        padding-top: 10px;
+    }
+
+    .preview-item.single {
+        width: 310px;
+        height: 264px;
+    }
+
+    .preview-placeholder {
+        font-size: 18px;
+        line-height: 30px;
+        top: 26px;
+    }
+}

@@ -18,6 +18,7 @@
 
 
   &__video {
+    width: 100%;
     background-color: $white;
   }
 
@@ -41,6 +42,32 @@
     border-bottom: 20px solid transparent;
     cursor: pointer;
   }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .studio-design {
+    margin-bottom: 32px;
+    & .heading {
+      margin-bottom: 74px;
+    }
+
+    &__video {
+      width: 100%;
+      height: auto;
+      padding-top: 55px;
+      padding-bottom: 55px;
+    }
+
+    &__button-play {
+      top: 38.5%;
+      left: 45.8%;
+      border-top: 78px solid rgba(0, 0, 0, 0);
+      border-left: 134px solid #d8d8d8;
+      border-bottom: 78px solid rgba(0, 0, 0, 0);
+    }
+  }
+
 }
 
 

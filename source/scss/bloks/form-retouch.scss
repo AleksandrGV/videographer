@@ -1,0 +1,29 @@
+.form-retouch {
+    &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-bottom: 20px;
+    }
+    &__item {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    &_input {
+    font-size: 16px;
+    padding: 5px;
+    }
+    
+    &__input::placeholder {
+    font-size: 12px;
+    }
+
+    &__button {
+        width: 280px;
+        border: none;
+        font-size: 16px;
+        padding: 14px;
+        margin-bottom: 4px;
+    }
+}

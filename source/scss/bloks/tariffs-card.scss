@@ -103,7 +103,7 @@
     @include list-reset();
     margin-left: 6px;
     margin-right: 6px;
-    margin-bottom: 32px;
+    margin-bottom: 10px;
   }
 
   &__item:last-child {
@@ -114,7 +114,8 @@
     grid-row-end: 2;
   }
 
-  &__link {
+  &__link,
+  &__additional-services {
     display: block;
     width: 100%;
     font-size: 12px;
@@ -131,6 +132,10 @@
   & .button {
     width: 100%;
   }
+
+  &__btn-text-tablet {
+    display: none;
+  }
 }
 
 .tariffs-card--3 {
@@ -141,6 +146,113 @@
   .tariffs-card__subtitle {
     margin-top: 8px;
     margin-bottom: 6px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .tariffs-card {
+    max-width: 420px;
+    max-height: 654px;
+    padding-top: 25px;
+
+    &::after {
+      width: 184px;
+      height: 180px;
+      background-image: url("../img/bg-bals-tablet.png");
+      right: 0;
+    }
+
+    &--3 {
+      max-height: 706px;
+
+      .tariffs-card__text:last-child {
+        line-height: 138%;
+        margin-top: 18px;
+        margin-bottom: 19px;
+
+        &::after {
+          top: 28%;
+        }
+      }
+
+      .tariffs-card__wrap-top {
+        margin-left: 48px;
+      }
+
+      .tariffs-card__subtitle {
+        margin-bottom: 11px;
+        margin-left: 13px;
+      }
+
+      .tariffs-card__list {
+        grid-template-columns: 1.2fr 2.1fr 1.2fr;
+        margin-bottom: 23px;
+      }
+
+      .tariffs-card__item:last-child {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 1;
+      }
+    }
+
+    &__wrap-top {
+      margin-left: 38px;
+      margin-right: 32px;
+    }
+
+    &__title {
+      margin-bottom: 27px;
+    }
+
+    &__location {
+      margin-bottom: 39px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 125%;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      margin-top: 13px;
+    }
+
+    &__list {
+      grid-template-columns: 1.4fr 1fr 2.1fr;
+      margin-left: 8px;
+      margin-right: 8px;
+      margin-bottom: 29px;
+    }
+
+    &__item {
+      &:last-child {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+      }
+    }
+
+    & .button-locations-open-form-wrap {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    & .button {
+      font-size: 16px;
+      padding: 16px 10px 13px;
+    }
+
+    &__btn-text-tablet {
+      display: block;
+    }
+
+    &__btn-text-mobile {
+      display: none;
+    }
   }
 }
 

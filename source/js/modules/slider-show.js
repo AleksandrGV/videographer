@@ -1,3 +1,5 @@
+//Slider show
+
 const slider = document.querySelector('.slider-show');
 const sliderList = slider.querySelector('.slider-show__list');
 const sliderItem = slider.querySelectorAll('.slider-show__item');

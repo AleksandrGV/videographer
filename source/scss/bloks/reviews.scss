@@ -15,3 +15,13 @@
 .button-reviews-open-form {
   width: 100%;
 }
+
+@media screen and (min-width: 1024px) {
+  .reviews {
+    margin-bottom: 62px;
+
+    .button-reviews-open-form-wrap {
+      margin: 0 auto;
+    }
+  }
+}

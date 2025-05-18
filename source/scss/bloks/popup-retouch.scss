@@ -1,0 +1,37 @@
+.popup-retouch {
+  width: 338px;
+  height: 254px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #D8D8D8;
+  border-radius: 2px;
+  padding: 35px 20px;
+  position: relative;
+  top: 50px;
+  visibility: hidden;
+  opacity: 0;
+  
+  &--show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  &__title {
+    font-size: 22px;
+    text-align: center;
+    line-height: 120%;
+    margin: 0 30px;
+  }
+
+}
+
+.popup-opacity--rerouch {
+    visibility: hidden;
+    opacity: 0;
+}
+  
+  
+  

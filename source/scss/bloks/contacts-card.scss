@@ -52,3 +52,19 @@
     margin-right: 35px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .contacts-card {
+    width: 258px;
+    padding: 36px 26px 10px 35px;
+
+    &__link {
+      font-size: 16px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-right: 39px;
+    }
+  }
+}

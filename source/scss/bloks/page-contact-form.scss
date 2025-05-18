@@ -1,0 +1,13 @@
+.page-contacts-form {
+    .page-main {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .popup-contacts-form {
+        visibility: visible;
+        opacity: 1;
+        top: 0;
+    }
+}

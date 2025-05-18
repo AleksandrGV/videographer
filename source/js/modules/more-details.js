@@ -7,18 +7,21 @@ const continuation = document.querySelectorAll('.continuation');
 
 for ( let i = 0; i < moreDetailsBtn.length; i++) {
   moreDetailsBtn[i].addEventListener('click', () => {
-    if (points[i].style.display === 'none') {
-      points[i].style.display = 'inline';
+    if (moreDetailsBtn[i].classList.contains('presentation__button--open')) {
+      //Закрываем блок
+      points[i].style.maxHeight = 'none';
       moreDetailsBtn[i].innerHTML = 'Подробнее';
       moreDetailsBtn[i].classList.remove('presentation__button--open');
-      moreDetails[i].style.display = 'none';
-      continuation[i].style.display = 'none';
+      moreDetails[i].style.maxHeight = '0';
+      continuation[i].style.maxHeight = '0';
     } else {
-      points[i].style.display ='none';
+      //Открываем блок
+      points[i].style.maxHeight = '0';
       moreDetailsBtn[i].innerHTML = 'Скрыть';
       moreDetailsBtn[i].classList.add('presentation__button--open');
-      moreDetails[i].style.display = 'flex';
-      continuation[i].style.display = 'inline';
+      moreDetails[i].style.maxHeight = moreDetails[i].scrollHeight + 'px';
+      continuation[i].style.maxHeight = continuation[i].scrollHeight + 'px';
     }
   });
 };
+

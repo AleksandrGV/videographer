@@ -17,6 +17,7 @@
     "@linthtml/linthtml": "^0.9.5",
     "autoprefixer": "^10.4.17",
     "browser-sync": "^3.0.2",
+    "del": "^8.0.0",
     "editorconfig-checker": "^5.1.2",
     "gulp": "^4.0.2",
     "gulp-avif": "^1.1.1",

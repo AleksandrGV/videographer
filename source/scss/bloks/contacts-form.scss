@@ -86,3 +86,34 @@
     padding-bottom: 11px;
   }
 }
+
+@media screen and (min-width: 1024px) {
+  .contacts-form {
+    margin-bottom: 10px;
+
+    &__list {
+      row-gap: 18px;
+    }
+
+    &__item {
+      width: 380px;
+    }
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &__input {
+      padding: 15px 17px;
+    }
+
+    &__input::placeholder {
+      font-size: 12px;
+    }
+
+    &__button {
+      width: 84%;
+      padding-top: 16px;
+    }
+  }
+}

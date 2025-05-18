@@ -1,0 +1,55 @@
+// Стили для страницы наши локации
+.page--locations-slider-gallery {
+    .our-locations {
+        margin-bottom: 30px;
+    }
+    
+    .slider-our-locations__list {
+        column-gap: 0;
+    }
+    
+    .slider-our-locations__img {
+        width: 251px;
+        height: 358px;
+    }
+    
+    .slider-control {
+        top: 38%;
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .page--locations-slider-gallery .slider-our-locations__img {
+      width: 420px;
+    }
+}
+
+  
+@media screen and (min-width: 1024px) {
+    .page--locations-slider-gallery { 
+
+        .slider-our-locations__list {
+            width: 88%;
+            grid-auto-columns: 100%;
+        }
+        .slider-our-locations__img {
+            width: 771px;
+            height: 650px;
+        }
+        .slider-control {
+            top: 41%;
+        }
+    }
+}
+  
+@media screen and (min-width: 1440px) {
+    .page--locations-slider-gallery {
+        .slider-our-locations__img {
+          height: 800px;
+        }
+        .slider-control {
+          column-gap: 84%;
+          top: 42%;
+        }
+    }
+}

@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Сайт видеографа Гончаренко Ирины">
-    <meta name="keywords" content="Видеосъёмка, видеограф, видеограф Тюмень, видеосьёмка на заказ">
+    <meta name="description" content="Сайт видеографа, фотографа">
+    <meta name="keywords" content="Видеосъёмка, видеограф, видеограф Тюмень, видеосъёмка на заказ">
     <link rel="preload" href="fonts/Arial-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css" type="text/css">
-    <title>Сайт портфолио видеограф Ирина</title>
+    <title>Сайт портфолио видеографа / фотографа главная</title>
   </head>
 
-  <body class="page__body">
-  <header class="header">
+  <body class="page-body">
+  <header class="header header--nojs">
     <div class="container container--mobile">
       <div class="header__wrap">
-        <a class="logo" href="#index.html">
+        <a class="logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" type="image/svg+xml" width="108" height="35">
             <source media="(min-width: 1024px)" srcset="img/logo-tablet.svg" type="image/svg+xml" width="113" height="36">
             <img class="logo-img" src="img/logo-mobile.svg" alt="Логотип Add Shop" width="63" height="20">
           </picture>
         </a>
-        <nav class="menu menu--nojs menu--closed">
+        <nav class="menu menu--nojs">
           <button class="menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
           <ul class="menu__list menu__list--header">
             <li class="menu__item"><a class="menu__link menu__link--active" href="#potrfolio" >Портфолио</a></li>
@@ -36,10 +36,12 @@
           </ul>
         </nav>
         <div class="header__call-back">
-          <a class="header__call-back-open-form" href="#form-callback.html">
-            <span class="header__call-back-open-form-text">Обратный звонок</span>
-            <img class="header__call-back-open-form-icon-phone" src="img/icon-call.svg" alt="Phone" title="Обратный звонок" width="26" height="26">
-          </a>
+          <div class="header__call-back-open-form-wrap">
+            <a class="header__call-back-open-form" href="form-callback.html">
+              <span class="header__call-back-open-form-text">Обратный звонок</span>
+              <img class="header__call-back-open-form-icon-phone" src="img/icon-call.svg" alt="Phone" title="Обратный звонок" width="26" height="26">
+            </a>
+          </div>
           <a class="header__call-back-phone" href="+7(499)3446091" >+7 (499) 344 60 91</a>
         </div>
       </div>
@@ -48,18 +50,20 @@
 
 <!-- Main -->
   <main class="page-main">
-  <section class="about-us">
+    <section class="about-us">
       <div class="container">
         <div class="about-us__wrap">
           <h1 class="about-us__title">Профессиональная <span class="line-second">фотосессия в студии</span></h1>
           <h4 class="about-us__subtitle">Наша фотостудия позволит исполнить ваши мечты</h4>
           <div class="about-us__wrap-text">
-            <p class="about-us__text">Фотографии стали неотъемлемой частью нашей жизни.
+            <p class="about-us__text"><span class="one-line one-line-tablet">Фотографии стали неотъемлемой частью нашей жизни.</span>
               Это теперь не просто памятные снимки в альбомах, ныне фото становиться способом понравиться окружающим, получить восхищение, заявить о себе всему миру.</p>
-            <p class="about-us__text">Выбор правильной фотостудии занимает далеко не последнее место в получение фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь
+            <p class="about-us__text">Выбор правильной фотостудии занимает далеко не последнее место в получение
+              <span class="one-line">фотографий. И мы с точностью заявляем, что нашей фотостудией вы останетесь</span>
               довольны и еще не раз захотите возвращаться к нам.</p>
           </div>
-          <a class="button button--open-form" href="#form-callback.html">Получить консультацию</a>
+          <!-- Переход по ссылке в случае отключенного js  -->
+          <a class="button button--open-form" href="contacts-form.html">Получить консультацию</a>
         </div>
       </div>
     </section>
@@ -69,23 +73,23 @@
         <div class="slider slider-show">
           <ul class="list slider__list slider-show__list">
             <li class="slider__item slider-show__item slider-show__item--active">
-              <a class="slider-show__link" href="#">
+              <a class="slider-show__link" href="slider-show-gallery.html">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/our-works-center.avif" type="image/avif" width="556" height="618">
-                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.avif" type="image/avif" width="406" height="451">
+                  <source media="(min-width: 593px)" srcset="img/our-works-center-tablet.avif" type="image/avif" width="406" height="451">
                   <source srcset="img/our-works-center-mobile.avif" type="image/avif" width="237" height="262">
                   <source media="(min-width: 1440px)" srcset="img/our-works-center.webp" type="image/webp" width="556" height="618">
-                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.webp" type="image/webp" width="406" height="451">
+                  <source media="(min-width: 593px)" srcset="img/our-works-center-tablet.webp" type="image/webp" width="406" height="451">
                   <source srcset="img/our-works-center-mobile.webp" type="image/webp" width="237" height="262">
                   <source media="(min-width: 1440px)" srcset="img/our-works-center.jgp" type="image/jpg" width="556" height="618">
-                  <source media="(min-width: 1024px)" srcset="img/our-works-center-tablet.jgp" type="image/jpg" width="406" height="451">
+                  <source media="(min-width: 593px)" srcset="img/our-works-center-tablet.jgp" type="image/jpg" width="406" height="451">
                   <img class="slider-show__img"
                   src="img/our-works-center-mobile.jpg" alt="Наши работы 1" width="237" height="262">
                 </picture>
               </a>
             </li>
             <li class="slider__item slider-show__item slider-show__item--next">
-              <a class="slider-show__link" href="#">
+              <a class="slider-show__link" href="slider-show-gallery.html">
                 <picture>
                   <source media="(min-width: 1440px)" srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
                   <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.avif" type="image/avif" width="406" height="451">
@@ -101,7 +105,7 @@
               </a>
             </li>
               <li class="slider__item slider-show__item">
-                <a class="slider-show__link" href="#">
+                <a class="slider-show__link" href="slider-show-gallery.html">
                   <picture>
                       <source media="(min-width: 1440px)" srcset="img/our-works-right.avif" type="image/avif" width="556" height="618">
                       <source media="(min-width: 1024px)" srcset="img/our-works-right-tablet.avif" type="image/avif" width="406" height="451">
@@ -117,7 +121,7 @@
                 </a>
               </li>
               <li class="slider__item slider-show__item">
-                <a class="slider-show__link" href="#">
+                <a class="slider-show__link" href="slider-show-gallery.html">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
                     <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.avif" type="image/avif" width="406" height="451">
@@ -128,12 +132,12 @@
                     <source media="(min-width: 1440px)" srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
                     <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.jgp" type="image/jpg" width="406" height="451">
                     <img class="slider-show__img"
-                    src="img/our-works-left-mobile.jpg" alt="Наши работы 1" width="237" height="262">
+                    src="img/our-works-left-mobile.jpg" alt="Наши работы 4" width="237" height="262">
                   </picture>
                 </a>
               </li>
               <li class="slider__item slider-show__item slider-show__item--prev">
-                <a class="slider-show__link" href="#">
+                <a class="slider-show__link" href="slider-show-gallery.html">
                   <picture>
                     <source media="(min-width: 1440px)" srcset="img/our-works-left.avif" type="image/avif" width="556" height="618">
                     <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.avif" type="image/avif" width="406" height="451">
@@ -143,12 +147,12 @@
                     <source srcset="img/our-works-left-mobile.webp" type="image/webp" width="237" height="262">
                     <source media="(min-width: 1440px)" srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618">
                     <source media="(min-width: 1024px)" srcset="img/our-works-left-tablet.jgp" type="image/jpg" width="406" height="451">
-                    <img class="slider-show__img" src="img/our-works-left-mobile.jpg"  alt="Наши работы 1" width="237" height="262">
+                    <img class="slider-show__img" src="img/our-works-left-mobile.jpg"  alt="Наши работы 5" width="237" height="262">
                   </picture>
                 </a>
               </li>
             </ul>
-            <ul class="slider-control">
+            <ul class="slider-control slider-control--show">
               <li class="slider-control__item">
                   <button class="control control--left" type="button">
                       <span class="visually-hidden">Стрелка влево</span>
@@ -194,9 +198,9 @@
       <div class="container container--mobile">
         <h3 class="heading">Наши локации</h3>
         <div class="slider-our-locations">
-          <ul class="list slider__list slider-our-locations__list">
-            <li class="slider__item slider-our-locations__item">
-              <a class="slider-our-locations__link" href="#">
+          <ul class="list slider-our-locations__list">
+            <li class="slider-our-locations__item">
+              <a class="slider-our-locations__link" href="locations-slider-gallery.html">
                 <picture>
                   <source srcset="img/our-locations-left.avif" type="image/avif" width="395" height="349">
                   <source srcset="img/our-locations-left.webp" type="image/webp" width="395" height="349">
@@ -204,8 +208,8 @@
                 </picture>
               </a>
             </li>
-            <li class="slider__item slider-our-locations__item">
-              <a class="slider-our-locations__link" href="#">
+            <li class="slider-our-locations__item">
+              <a class="slider-our-locations__link" href="locations-slider-gallery.html">
                 <picture>
                   <source srcset="img/our-locations-center.avif" type="image/avif" width="395" height="349">
                   <source srcset="img/our-locations-center.webp" type="image/webp" width="395" height="349">
@@ -213,12 +217,12 @@
                 </picture>
               </a>
             </li>
-            <li class="slider__item slider-our-locations__item">
-              <a class="slider-our-locations__link" href="#">
+            <li class="slider-our-locations__item">
+              <a class="slider-our-locations__link" href="locations-slider-gallery.html">
                 <picture>
                   <source srcset="img/our-locations-right.avif" type="image/avif" width="395" height="349">
                   <source srcset="img/our-locations-right.webp" type="image/webp" width="395" height="349">
-                  <img class="slider-our-locations__img" src="img/our-locations-right.jpg" alt="Наша локация 2" width="395" height="349">
+                  <img class="slider-our-locations__img" src="img/our-locations-right.jpg" alt="Наша локация 3" width="395" height="349">
                 </picture>
               </a>
             </li>
@@ -237,7 +241,7 @@
           </ul>
         </div>
         <div class="button-locations-open-form-wrap">
-          <a class="button button-locations-open-form" href="#form-our-locations.html">Выбрать локацию</a>
+          <a class="button button--open-locations" href="locations-form.html">Выбрать локацию</a>
         </div>
       </div>
     </section>
@@ -375,7 +379,7 @@
                   <source media="(min-width: 1024px)" srcset="img/gallery-tablet-8.jpg" type="image/jpg" width="273" height="490">
                   <img class="gallery__img" src="img/gallery-mobile-8.jpg" srcset="img/gallery-mobile-8.webp" alt="Семейная фотосессия"  width="180" height="323">
                 </picture>
-                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Семейная</span> фотосессия &#40;дети +14&#41;</p>
+                  <p class="gallery__img-description"><span class="gallery__img-description-first-line">Семейная</span> фотосессия <span class="gallery__img-description-last-line">&#40;дети +14&#41;</span></p>
               </a>
             </li>
             <li class="gallery__item gallery__item--9">
@@ -429,27 +433,27 @@
       <div class="container">
         <h3 class="heading">Этапы работ</h3>
         <ul class="stages-of-work__list">
-          <li class="stages-of-work__item">
+          <li class="stages-of-work__item stages-of-work__item--1">
             <h5 class="stages-of-work__subtitle">Заявка</h5>
             <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
             <span class="stages-of-work__number">1</span>
           </li>
-          <li class="stages-of-work__item">
+          <li class="stages-of-work__item stages-of-work__item--2">
             <h5 class="stages-of-work__subtitle">Бронь</h5>
             <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
             <span class="stages-of-work__number">2</span>
           </li>
-          <li class="stages-of-work__item">
+          <li class="stages-of-work__item stages-of-work__item--3">
             <h5 class="stages-of-work__subtitle">Составление Технического задания</h5>
             <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
             <span class="stages-of-work__number">3</span>
           </li>
-          <li class="stages-of-work__item">
+          <li class="stages-of-work__item stages-of-work__item--4">
             <h5 class="stages-of-work__subtitle">Съёмка</h5>
             <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
             <span class="stages-of-work__number">4</span>
           </li>
-          <li class="stages-of-work__item">
+          <li class="stages-of-work__item stages-of-work__item--5">
             <h5 class="stages-of-work__subtitle">Готовые фото</h5>
             <p class="stages-of-work__text">Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких.</p>
             <span class="stages-of-work__number">5</span>
@@ -469,7 +473,7 @@
           <p  class="presentation__text"><span class="one-line">А их, -на секундочку, -аж семь штук.</span>
             Каждый наш зал оборудован интерьером
             <span class="one-line">и профессиональным оборудованием,</span>
-            и подойдет для любой фотоссесии, а мы хотим рассказать вам о все подробнее.
+            и подойдет для любой фотоссесии, а мы хотим рассказать <span class="one-line-tablet">вам о все подробнее.</span>
           </p>
 
           <p class="presentation__text">Какие идеи можно воплотить?</p>
@@ -477,15 +481,15 @@
           <h5 class="presentation__subtitle">Фотоссесия Love Story</h5>
 
           <p class="presentation__text presentation__text--love-story">Мечтаете показать всему миру вашу историю
-            <span class="one-line">создания любви или хранить снимки</span>
-            в памятном альбоме, то это фотоссесия отлично подойдет вам. Расскажите вашу
+            <span class="one-line">создания любви или хранить<span class="dot-tablet">.</span><span class="hidden-tablet"> снимки</span></span>
+            <span class="hidden-tablet">в памятном альбоме, то это фотоссесия отлично подойдет вам. Расскажите вашу
             <span class="one-line">историю с любимым человеком</span>
-            в фотографиях в необычном месте.
+            в фотографиях в необычном месте.</span>
           </p>
 
-          <h5 class="presentation__subtitle presentation__subtitle--family">Семейная фотоссесия</h5>
+          <h5 class="presentation__subtitle presentation__subtitle--family hidden-tablet">Семейная фотоссесия</h5>
 
-          <p class="presentation__text presentation__text--rubric">Семья — это самое главное в жизни любого человека.
+          <p class="presentation__text presentation__text--rubric hidden-tablet">Семья — это самое главное в жизни любого человека.
             Хотите повесить<span class="points">&#160;&#46;&#46;&#46;</span><span class="continuation">фотографии
               <span class="one-line">в вашем уютном доме, смотреть на них</span>
               и испытывать прилив нежности, значит семейная фотоссесия в нашей фотостудии станет отличным вариантом.</span>
@@ -578,17 +582,22 @@
                 <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
                 <ul class="tariffs-card__list">
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Помощь <br> в позировании</a>
+                    <span class="tariffs-card__additional-services">Помощь <br> в позировании</span>
                   </li>
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Визажист <br> &plus; 2000 &#8381;</a>
+                    <span class="tariffs-card__additional-services">Визажист <br> &plus; 2000 &#8381;</span>
                   </li>
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                    <a class="tariffs-card__link button--open-retouch" href="form-retouch.html">
+                      <span class="tariffs-card__link-text">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</span>
+                    </a>
                   </li>
                 </ul>
                 <div class="button-locations-open-form-wrap">
-                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                  <a class="button button-locations-open-fotm button--open-locations" href="locations-form.html">
+                    <span class="tariffs-card__btn-text-mobile">Выбрать локацию</span>
+                    <span class="tariffs-card__btn-text-tablet">Забронировать</span>
+                  </a>
                 </div>
             </article>
           </li>
@@ -617,17 +626,22 @@
                 <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
                 <ul class="tariffs-card__list">
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Помощь <br> в позировании</a>
+                    <span class="tariffs-card__additional-services">Помощь <br> в позировании</span>
                   </li>
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Визажист <br> &plus; 2000 &#8381;</a>
+                    <span class="tariffs-card__additional-services">Визажист <br> &plus; 2000 &#8381;</span>
                   </li>
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                    <a class="tariffs-card__link button--open-retouch" href="#form-retouch.html">
+                      <span class="tariffs-card__link-text">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</span>
+                    </a>
                   </li>
                 </ul>
                 <div class="button-locations-open-form-wrap">
-                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                  <a class="button button-locations-open-fotm button--open-locations" href="locations-form.html">
+                      <span class="tariffs-card__btn-text-mobile">Выбрать локацию</span>
+                      <span class="tariffs-card__btn-text-tablet">Забронировать</span>
+                  </a>
                 </div>
             </article>
           </li>
@@ -636,7 +650,7 @@
               <div class="tariffs-card__wrap-top">
                 <h4 class="tariffs-card__title">Maxi</h4>
                 <span class="tariffs-card__rate">N <span class="currency-symbol">&#8381;</span></span>
-                <span class="tariffs-card__location">&#47; Максимальное количество</span>
+                <span class="tariffs-card__location">&#47; Максимальное количество локаций</span>
                 <div class="tariffs-card__description-wrap">
                   <p class="tariffs-card__text">Длительность &#8212;
                     <span class="tariffs-card__definition">4 часа</span>
@@ -661,11 +675,16 @@
                 <h5 class="tariffs-card__subtitle">Дополнительные услуги</h5>
                 <ul class="tariffs-card__list">
                   <li class="tariffs-card__item">
-                    <a class="tariffs-card__link" href="#">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</a>
+                    <a class="tariffs-card__link button--open-retouch" href="#form-retouch.html">
+                      <span class="tariffs-card__link-text">Дополнительная ретушь <br> фото — 1 шт. &#47; 250 &#8381;</span>
+                    </a>
                   </li>
                 </ul>
                 <div class="button-locations-open-form-wrap">
-                  <a class="button button-locations-open-fotm" href="#" >Выбрать локацию</a>
+                    <a class="button button-locations-open-fotm button--open-locations" href="locations-form.html">
+                      <span class="tariffs-card__btn-text-mobile">Выбрать локацию</span>
+                      <span class="tariffs-card__btn-text-tablet">Забронировать</span>
+                    </a>
                 </div>
             </article>
           </li>
@@ -674,7 +693,7 @@
     </section>
     <section class="presentation photo-trend">
       <div class="container container--mobile">
-        <h3 class="heading">Фотоискусство в тренде. Любая фотоссесия <span class="one-line">ваша история</span></h3>
+        <h3 class="heading"><span class="one-line-tablet">Фотоискусство в тренде. </span>Любая фотоссесия <span class="one-line">ваша история</span></h3>
         <div class="presentation__wrap">
           <p class="presentation__text">Мы искренни так считаем и готовы кричать эту фразу на весь мир.
             Фотографии давно перестали пылиться на полках в семейных, потрёпанных альбомах.</p>
@@ -682,13 +701,13 @@
           <p class="presentation__text">Хотите самовыразиться и не знаете как? Позвоните нам и закажите фотосъемку.
             <span class="one-line">Хотите удивить и впечатлить?</span>
             <span class="one-line">Мы вам поможем.</span>
-            Не уверены? Посмотрите отзывы
-            <span class="one-line">и проконсультируйтесь.</span>
+            <span class="one-line-tablet">Не уверены? Посмотрите отзывы
+            <span class="one-line">и проконсультируйтесь.</span></span>
             Боитесь фотографироваться? Наши локации помогут вам расслабиться и почувствовать себя как дома.</p>
 
           <p class="presentation__text">Доступные цены для всех и вежливость.</p>
 
-          <p class="presentation__text photo-trend__text">Повторим еще раз: мы работаем в первую очередь для клиентов, и аренда нашей
+          <p class="presentation__text photo-trend__text hidden-tablet">Повторим еще раз: мы работаем в первую очередь для клиентов, и аренда нашей
             фотостудии имеют цены семи чашек кофе. Вы можете расплатится любым удобным
             <span class="one-line">для вас способом: наличным</span>или безналичным<span class="points">&#160;&#46;&#46;&#46;</span>
             <span class="continuation">расчетом. <span class="one-line">Все для вашего удобства.</span></span></p>
@@ -728,6 +747,7 @@
       <div class="container container--mobile">
         <h3 class="heading">Подарочный сертификат на фотосессию</h3>
         <article class="gift-certificate-card">
+        <div class="gift-certificate-card__wrap-description">
           <h4 class="gift-certificate-card__title">Сертификат на фотосессию</h4>
           <strong class="gift-certificate-card__slogan">Это подарок, который западает в душу</strong>
           <ul class="gift-certificate-card__list">
@@ -741,16 +761,20 @@
               <p class="gift-certificate-card__text">Всё включено</p>
             </li>
           </ul>
-          <picture>
-            <source srcset="img/certificate.avif" type="image/avif" width="267" height="267">
-            <source srcset="img/certificate.webp" type="image/webp" width="267" height="267">
-            <img class="gift-certificate-card__img" src="img/certificate.png" alt="Подарочный сертификат" width="267" height="267">
-          </picture>
-          <strong class="gift-certificate-card__warning">Срок действия сертификата: 2 месяца
-            со дня приобретения.</strong>
-            <div class="button-open-form-wrap">
-              <a class="button button--open-form" href="#form-callback.html">Приобрести</a>
-            </div>
+        </div>
+          <div class="gift-certificate-card__wrap-purchase">
+            <picture>
+              <source srcset="img/certificate.avif" type="image/avif" width="267" height="267">
+              <source srcset="img/certificate.webp" type="image/webp" width="267" height="267">
+              <img class="gift-certificate-card__img" src="img/certificate.png" alt="Подарочный сертификат" width="267" height="267">
+            </picture>
+            <strong class="gift-certificate-card__warning">Срок действия сертификата: 2 месяца
+              со дня приобретения.</strong>
+              <div class="button-open-form-wrap">
+                <!-- Переход по ссылке в случае отключенного js  -->
+                <a class="button button--open-form" href="contacts-form.html">Приобрести</a>
+              </div>
+          </div>
         </article>
       </div>
     </section>
@@ -758,103 +782,10 @@
       <div class="container container--mobile">
         <h3 class="heading">Отзывы</h3>
         <div class="slider-reviews">
-          <!-- <div class="slider"> -->
-            <ul class="slider__list slider-reviews__list">
+            <ul class="slider-reviews__list">
               <!--Слайды добавляются динамически-->
             </ul>
           <!-- Кнопки управления слайдами -->
-            <!-- <ul class="slider-control">
-                <li class="slider-control__item">
-                    <button class="control control--left" id="left" type="button">
-                        <span class="visually-hidden">Стрелка влево</span>
-                    </button>
-                </li>
-                <li class="slider-control__item">
-                    <button class="control control--right" id="right" type="button">
-                    <span class="visually-hidden">Стрелка вправо</span>
-                    </button>
-                </li>
-            </ul> -->
-        <!-- </div> -->
-          <!-- <ul class="list slider__list slider-reviews__list">
-            <li class="slider__item slider-reviews__item slider-reviews__item--active">
-              <article class="reviews-card">
-                <div class="reviews-card__img-wrap">
-                  <svg class="reviews-card__img" width="223" height="244" viewBox="0 0 223 244" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path d="M153.865 9.70947C175.533 14.6639 203.683 9.07444 217.143 26.8205C230.614 44.5808 216.608 70.3184 216.764 92.6375C216.899 111.911 223.465 130.984 218.002 149.461C212.252 168.906 198.86 184.451 185.197 199.397C169.351 216.731 155.115 240.113 131.936 243.612C108.772 247.108 89.7592 226.081 68.125 217.068C46.4949 208.058 16.3013 210.677 4.35394 190.464C-7.88501 169.756 9.44434 143.793 10.602 119.745C11.5265 100.543 4.69313 81.379 10.4877 63.0554C16.5288 43.9522 27.5564 25.892 43.9168 14.397C60.0298 3.0758 80.4838 0.905264 100.136 0.0674132C118.628 -0.720989 135.818 5.58323 153.865 9.70947Z" fill="#F9F4EE"/>
-                    <path d="M143.515 26.033C163.726 30.6422 189.982 25.4422 202.537 41.9519C215.102 58.4747 202.038 82.4192 202.184 103.183C202.309 121.114 208.434 138.858 203.338 156.048C197.975 174.138 185.484 188.6 172.74 202.505C157.96 218.631 144.682 240.384 123.061 243.639C101.455 246.892 83.7216 227.329 63.5426 218.945C43.3674 210.562 15.2048 212.999 4.06107 194.194C-7.35463 174.929 8.80907 150.774 9.8889 128.402C10.7511 110.538 4.37745 92.7092 9.78226 75.6622C15.417 57.89 25.7028 41.0881 40.9628 30.3939C55.9919 19.8615 75.0701 17.8422 93.4004 17.0627C110.649 16.3292 126.682 22.1942 143.515 26.033Z" fill="#EAD8BF"/>
-                    <path d="M143.515 26.033C163.726 30.6422 189.982 25.4422 202.537 41.9519C215.102 58.4747 202.038 82.4192 202.184 103.183C202.309 121.114 208.434 138.858 203.338 156.048C197.975 174.138 185.484 188.6 172.74 202.505C157.96 218.631 144.682 240.384 123.061 243.639C101.455 246.892 83.7216 227.329 63.5426 218.945C43.3674 210.562 15.2048 212.999 4.06107 194.194C-7.35463 174.929 8.80907 150.774 9.8889 128.402C10.7511 110.538 4.37745 92.7092 9.78226 75.6622C15.417 57.89 25.7028 41.0881 40.9628 30.3939C55.9919 19.8615 75.0701 17.8422 93.4004 17.0627C110.649 16.3292 126.682 22.1942 143.515 26.033Z" fill="url(#pattern0_1_682)"/>
-                    <defs>
-                    <pattern id="pattern0_1_682" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_1_682" transform="matrix(0.0045, 0, 0, 0.004, -0.02, 0)"/>
-                    </pattern>
-                    <!-- Картинки подключать сюда в тег image -->
-                    <!--<image id="image0_1_682" width="230" height="250" xlink:href="img/reviews-maria.jpg"></image>
-                  </defs>
-                  </svg>
-                </div>
-                <div class="reviews-card__wrap">
-                  <h3 class="reviews-card__title">Мария</h3>
-                  <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
-                    Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <button class="reviews-card__button" type="button">Показать ещё</button>
-                </div>
-              </article>
-            </li>
-            <li class="slider__item slider-reviews__item slider-reviews__item--next">
-              <article class="reviews-card">
-                <div class="reviews-card__img-wrap">
-                  <svg width="236" height="231" viewBox="0 0 236 231" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path d="M139.163 1.01145C158.297 4.55548 176.008 14.4346 189.649 28.3402C202.851 41.7987 207.198 60.6985 214.696 78.0105C222.917 96.9935 237.115 114.544 235.93 135.204C234.701 156.631 221.887 175.576 208.155 192.046C194.159 208.833 177.981 226.755 156.474 230.503C135.317 234.19 116.975 216.319 96.0252 211.587C75.598 206.972 49.2359 218.297 34.8689 203.031C20.1675 187.411 34.8275 160.585 28.6695 140.019C22.7785 120.345 0.661453 107.209 0.0290872 86.6776C-0.625256 65.433 9.82086 43.8997 25.2601 29.3256C40.3559 15.0757 62.6663 13.5529 82.7951 8.54927C101.512 3.89657 120.2 -2.5008 139.163 1.01145Z" fill="#F2F4F4"/>
-                    <path d="M137.419 20.8189C154.945 24.0577 171.166 33.0859 183.659 45.794C195.751 58.0933 199.732 75.3654 206.599 91.1864C214.129 108.535 227.133 124.574 226.048 143.454C224.922 163.036 213.186 180.349 200.608 195.401C187.79 210.742 172.972 227.12 153.275 230.545C133.897 233.915 117.098 217.584 97.9102 213.259C79.2012 209.041 55.0565 219.391 41.8979 205.44C28.4331 191.165 41.86 166.649 36.22 147.855C30.8244 129.875 10.5677 117.87 9.98855 99.1071C9.38925 79.6922 18.9567 60.0134 33.0973 46.6944C46.9233 33.6718 67.3572 32.2802 85.793 27.7075C102.936 23.4555 120.051 17.6091 137.419 20.8189Z" fill="#B0F1FF"/>
-                    <path d="M137.419 20.8189C154.945 24.0577 171.166 33.0859 183.659 45.794C195.751 58.0933 199.732 75.3654 206.599 91.1864C214.129 108.535 227.133 124.574 226.048 143.454C224.922 163.036 213.186 180.349 200.608 195.401C187.79 210.742 172.972 227.12 153.275 230.545C133.897 233.915 117.098 217.584 97.9102 213.259C79.2012 209.041 55.0565 219.391 41.8979 205.44C28.4331 191.165 41.86 166.649 36.22 147.855C30.8244 129.875 10.5677 117.87 9.98855 99.1071C9.38925 79.6922 18.9567 60.0134 33.0973 46.6944C46.9233 33.6718 67.3572 32.2802 85.793 27.7075C102.936 23.4555 120.051 17.6091 137.419 20.8189Z" fill="url(#pattern0_1_691)"/>
-                    <defs>
-                    <pattern id="pattern0_1_691" patternContentUnits="objectBoundingBox" width="1" height="1">
-                      <use xlink:href="#image0_1_691" transform="matrix(0.0044, 0, 0, 0.0045, -0.01, -0.06)"/>
-                    </pattern>-->
-                    <!-- ККартинки подключать сюда в тег image -->
-                    <!--<image id="image0_1_691" width="230" height="250" xlink:href="img/reviews-sergey.jpg"></image>
-                    </defs>
-                  </svg>
-                </div>
-                <div class="reviews-card__wrap">
-                  <h3 class="reviews-card__title">Сергей</h3>
-                  <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
-                    Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <button class="reviews-card__button" type="button">Показать ещё</button>
-                </div>
-              </article>
-            </li>
-            <li class="slider__item slider-reviews__item slider-reviews__item--prev">
-              <article class="reviews-card">
-                <div class="reviews-card__img-wrap">
-                  <svg width="236" height="223" viewBox="0 0 236 223" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path d="M118.785 7.0097C138.499 3.76222 159.105 0.174465 177.7 7.48079C197.846 15.3963 217.787 29.1474 226.048 49.1543C234.246 69.0077 221.873 90.8304 220.977 112.291C220.058 134.311 233.698 159.484 220.7 177.282C207.593 195.23 179.925 192.029 158.481 197.868C141.009 202.625 124.044 205.73 106.144 208.471C83.527 211.936 59.5463 226.442 39.1092 216.153C18.9617 206.009 8.86419 180.664 6.38079 158.244C4.08578 137.525 22.0464 120.49 26.2511 100.073C29.6956 83.3473 19.774 64.323 28.7189 49.7769C37.6776 35.2084 57.0868 32.1407 72.5361 24.8047C87.7162 17.5966 102.204 9.74113 118.785 7.0097Z" fill="#FFE5C2"/>
-                    <mask id="mask0_1_705" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="13" y="14" width="222" height="209">
-                    <path d="M129.497 17.1899C148.948 14.8304 169.287 12.175 187.204 20.0956C206.614 28.6767 225.582 42.9592 232.845 62.878C240.052 82.6441 227.022 103.483 225.252 124.445C223.437 145.953 235.756 171.149 222.28 188.025C208.692 205.042 181.714 200.763 160.461 205.585C143.143 209.515 126.392 211.849 108.739 213.789C86.4339 216.24 62.334 229.439 42.7367 218.523C23.4171 207.762 14.5765 182.543 13.0749 160.503C11.6871 140.135 29.9933 124.212 34.9617 104.409C39.0317 88.1867 30.1008 69.1603 39.4698 55.2986C48.8532 41.4156 67.9983 39.2194 83.4409 32.6825C98.6143 26.2595 113.137 19.1744 129.497 17.1899Z" fill="#89E289"/>
-                    <path d="M129.497 17.1899C148.948 14.8304 169.287 12.175 187.204 20.0956C206.614 28.6767 225.582 42.9592 232.845 62.878C240.052 82.6441 227.022 103.483 225.252 124.445C223.437 145.953 235.756 171.149 222.28 188.025C208.692 205.042 181.714 200.763 160.461 205.585C143.143 209.515 126.392 211.849 108.739 213.789C86.4339 216.24 62.334 229.439 42.7367 218.523C23.4171 207.762 14.5765 182.543 13.0749 160.503C11.6871 140.135 29.9933 124.212 34.9617 104.409C39.0317 88.1867 30.1008 69.1603 39.4698 55.2986C48.8532 41.4156 67.9983 39.2194 83.4409 32.6825C98.6143 26.2595 113.137 19.1744 129.497 17.1899Z" fill="url(#pattern0_1_705)"/>
-                    </mask>
-                    <g mask="url(#mask0_1_705)">
-                      <rect x="10" y="12" width="250" height="230" fill="url(#pattern0_1_705)"/>
-                    </g>
-                    <defs>
-                    <pattern id="pattern0_1_705" patternContentUnits="objectBoundingBox" width="1" height="1">
-                      <use xlink:href="#image0_1_705" transform="matrix(0.00368, 0, 0, 0.004, 0, 0)"/>
-                    </pattern>-->
-                    <!-- Картинки подключать сюда в тег image -->
-                    <!--<image id="image0_1_705" width="250" height="230" xlink:href="img/reviews-ruslan.jpg"></image>
-                    </defs>
-                    </svg>
-                </div>
-                <div class="reviews-card__wrap">
-                  <h3 class="reviews-card__title">Сергей</h3>
-                  <p class="reviews-card__text">Съешь еще этих мягких французских булок, да выпей чаю.
-                    Съешь еще этих мягких французских булок, да выпей чаю. Съешь еще этих мягких французских булок, да выпей чаю.</p>
-                    <button class="reviews-card__button" type="button">Показать ещё</button>
-                </div>
-              </article>
-            </li>
-          </ul> -->
           <ul class="slider-control slider-control--reviews">
             <li class="slider-control__item">
                 <button class="control control--left control-reviews control-reviews--left" id="left-reviews" type="button">
@@ -869,43 +800,55 @@
           </ul>
         </div>
         <div class="button-reviews-open-form-wrap">
-          <a class="button button-reviews-open-form" href="#form-our-reviews.html">Добавить отзыв</a>
+          <a class="button button--open-reviews" href="reviews-form.html">Добавить отзыв</a>
         </div>
       </div>
     </section>
-    <!-- <section class="contacts">
+    <section class="contacts">
       <div class="container container--mobile">
         <h3 class="visually-hidden">Контакты</h3>
-        <div class="contacts__maps">
-          <a class="contacts__link" href="#">
-            <img class="contacts__img" src="img/card-address-mobile.png" alt="Карта месторасположения">
-          </a>
-          <div class="contacts__wrap">
-            <article class="contacts-card">
-              <h4 class="visually-hidden">Карта с контактами</h4>
-              <ul class="contacts-card__list">
-                <li class="contacts-card__item">
-                  <a class="contacts-card__link" href="#index.html">
-                    <img class="contacts-card__logo" src="img/logo-contacts.svg" alt="Логотип Add Photo"  width="113" height="35">
-                  </a>
-                </li>
-                <li class="contacts-card__item">
-                  <a class="contacts-card__link" href="+7(499)3446091">+7 (499) 344 60 91</a>
-                </li>
-                <li class="contacts-card__item">
-                  <a class="contacts-card__link" href="mailto:content@addmarkets.ru">content@addmarkets.ru</a>
-                </li>
-                <li class="contacts-card__item">
-                  <p class="contacts-card__text">
-                    Режим работы&#58;
-                    <span class="contacts-card__info">Пн&#8208;Пт</span>
-                    <span class="contacts-card__info">09&#58;00 &#8208; 18&#58;00</span>
-                  </p>
-                </li>
-              </ul>
-            </article>
+        <div class="contacts__wrap">
+          <div class="contacts__maps">
+            <a class="contacts__link" href="#">
+              <picture>
+                <!-- <source media="(min-width: 1440px)" srcset="img/our-works-left.avif" type="image/avif" width="556" height="618"> -->
+                    <source media="(min-width: 1024px)" srcset="img/card-address-tablet.avif" type="image/avif" width="848" height="554">
+                    <source srcset="img/card-address-mobile.avif" type="image/avif" width="237" height="262">
+                    <!-- <source media="(min-width: 1440px)" srcset="img/our-works-left.webp" type="image/webp" width="556" height="618"> -->
+                    <source media="(min-width: 1024px)" srcset="img/card-address-tablet.webp" type="image/webp" width="406" height="554">
+                    <source srcset="img/card-address-mobile.webp" type="image/webp" width="340" height="541">
+                    <!-- <source media="(min-width: 1440px)" srcset="img/our-works-left.jgp" type="image/jpg" width="556" height="618"> -->
+                    <source media="(min-width: 1024px)" srcset="img/card-address-tablet.jgp" type="image/jpg" width="848" height="554">
+                <source srcset="img/card-address-mobile.avif" type="image/avif" width="340" height="541">
+                <img class="contacts__img" src="img/card-address-mobile.png" alt="Карта месторасположения" width="340" height="541">
+              </picture>
+            </a>
+            <div class="contacts__wrap-card">
+              <article class="contacts-card">
+                <h4 class="visually-hidden">Карта с контактами</h4>
+                <ul class="contacts-card__list">
+                  <li class="contacts-card__item">
+                    <a class="contacts-card__link" href="#index.html">
+                      <img class="contacts-card__logo" src="img/logo-contacts.svg" alt="Логотип Add Photo"  width="113" height="35">
+                    </a>
+                  </li>
+                  <li class="contacts-card__item">
+                    <a class="contacts-card__link" href="+7(499)3446091">+7 (499) 344 60 91</a>
+                  </li>
+                  <li class="contacts-card__item">
+                    <a class="contacts-card__link" href="mailto:content@addmarkets.ru">content@addmarkets.ru</a>
+                  </li>
+                  <li class="contacts-card__item">
+                    <p class="contacts-card__text">
+                      Режим работы&#58;
+                      <span class="contacts-card__info">Пн&#8208;Пт</span>
+                      <span class="contacts-card__info">09&#58;00 &#8208; 18&#58;00</span>
+                    </p>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
-        </div>
         <div class="contacts__form-wrap">
           <article class="contacts-form-card">
             <h3 class="contacts-form-card__title">Форма обратной связи</h3>
@@ -913,35 +856,36 @@
               <ul class="contacts-form__list">
                 <li class="contacts-form__item">
                   <label class="contacts-form__label" for="field-name">Имя</label>
-                  <input class="contacts-form__input" type="text" id="field-name" name="name" placeholder="Введите ваше имя" required>
+                  <input class="contacts-form__input" type="text" id="field-name" name="name" placeholder="Введите ваше имя" autocomplete="off" required>
                 </li>
                 <li class="contacts-form__item">
                   <label class="contacts-form__label" for="field-email">E-mail</label>
-                  <input class="contacts-form__input" type="email" id="field-email" name="email" placeholder="Введите ваш E-mail" required>
+                  <input class="contacts-form__input" type="email" id="field-email" name="email" placeholder="Введите ваш E-mail" autocomplete="off" required>
                 </li>
                 <li class="contacts-form__item">
                   <label class="contacts-form__label" for="field-phone">Телефон</label>
-                  <input class="contacts-form__input" type="tel" id="field-phone" name="phone" placeholder="Введите ваше Телефон">
+                  <input class="contacts-form__input" type="tel" id="field-phone" name="phone" placeholder="Введите ваше Телефон" autocomplete="off" required>
                 </li>
               </ul>
               <button class="button contacts-form__button" type="submit">Отправить</button>
             </form>
             <p class="contacts-form-card__text">
-              Нажимая кнопку «Отправить», вы даете согласие на обработку персональных данных и соглашаетесь с
+              <span class="one-line-tablet">Нажимая кнопку «Отправить», вы даете согласие</span> на обработку персональных данных и соглашаетесь с
               <a class="contacts-form-card__link" href="#">политикой конфиденциальности</a>
             </p>
           </article>
         </div>
       </div>
-    </section> -->
+      </div>
+    </section>
   </main>
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrap-top">
-        <a class="logo" href="#index.html">
+        <a class="logo" href="index.html">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" type="image/svg+xml" width="108" height="35">
-            <source media="(min-width: 1024px)" srcset="img/logo-tablet.svg" type="image/svg+xml" width="113" height="36">
+            <source media="(min-width: 1024px)" srcset="img/logo-tablet.svg" type="image/svg+xml" width="170" height="55">
             <img class="logo-img" src="img/logo-mobile.svg" alt="Логотип Add Shop" width="171" height="55">
           </picture>
         </a>
@@ -992,42 +936,43 @@
             </a>
           </li>
         </ul>
-
       </div>
     </div>
   </footer>
 
-  <!-- Попап форма обратной связи mobile -->
-   <div class="popup-opacity popup-opacity--mobile">
+  <!-- Попап форма обратной связи -->
+   <div class="popup-opacity">
      <section class="popup popup-contacts-form">
       <picture>
         <source srcset="img/popup-contacts-form.avif" type="image/avif" width="455" height="416">
         <source srcset="img/popup-contacts-form.webp" type="image/webp" width="455" height="416">
         <img class="popup-contacts-form__img" src="img/popup-contacts-form.jpg" alt="Оператор, конверт, телефон" width="455" height="416">
       </picture>
-       <h3 class="popup-contacts-form__title">Форма обратной связи</h3>
-       <form class="contacts-form" action="#" method="post">
-         <ul class="contacts-form__list">
-           <li class="contacts-form__item">
-             <label class="contacts-form__label" for="popup-field-name">Имя</label>
-             <input class="contacts-form__input contacts-form__input--name" type="text" id="popup-field-name" name="name" placeholder="Введите ваше имя">
-           </li>
-           <li class="contacts-form__item">
-             <label class="contacts-form__label" for="popup-field-email">E-mail</label>
-             <input class="contacts-form__input contacts-form__input--email" type="email" id="popup-field-email" name="email" placeholder="Введите ваш E-mail">
-           </li>
-           <li class="contacts-form__item">
-             <label class="contacts-form__label" for="popup-field-phone">Телефон</label>
-             <input class="contacts-form__input contacts-form__input--phone" type="tel" id="popup-field-phone" name="phone" placeholder="Введите ваше Телефон">
-           </li>
-         </ul>
-         <button class="button contacts-form__button" type="submit">Отправить</button>
-        </form>
-        <p class="popup-contacts-form__text">
-          <span class="one-line">Нажимая кнопку «Отправить», вы даете согласие</span>
-            на обработку персональных данных и соглашаетесь с
-          <a class="popup-contacts-form__link" href="#">политикой конфиденциальности</a>
-        </p>
+      <div class="popup-contacts-form__wrap">
+        <h3 class="popup-contacts-form__title">Форма обратной связи</h3>
+        <form class="contacts-form" action="#" method="post">
+          <ul class="contacts-form__list">
+            <li class="contacts-form__item">
+              <label class="contacts-form__label" for="popup-field-name">Имя</label>
+              <input class="contacts-form__input contacts-form__input--name" type="text" id="popup-field-name" name="name" placeholder="Введите ваше имя" autocomplete="off" required>
+            </li>
+            <li class="contacts-form__item">
+              <label class="contacts-form__label" for="popup-field-email">E-mail</label>
+              <input class="contacts-form__input contacts-form__input--email" type="email" id="popup-field-email" name="email" placeholder="Введите ваш E-mail" autocomplete="off" required>
+            </li>
+            <li class="contacts-form__item">
+              <label class="contacts-form__label" for="popup-field-phone">Телефон</label>
+              <input class="contacts-form__input contacts-form__input--phone" type="tel" id="popup-field-phone" name="phone" placeholder="Введите ваше Телефон" autocomplete="off" required>
+            </li>
+          </ul>
+          <button class="button contacts-form__button" type="submit">Отправить</button>
+         </form>
+         <p class="popup-contacts-form__text">
+           <span class="one-line">Нажимая кнопку «Отправить», вы даете согласие</span>
+             на обработку персональных данных и соглашаетесь с
+           <a class="popup-contacts-form__link" href="#">политикой конфиденциальности</a>
+         </p>
+      </div>
         <button class="button-close" type="button" >
           <span class="visually-hidden">Закрыть</span>
         </button>
@@ -1043,11 +988,211 @@
           <p class="successful-sending__text">Наши специалисты уже обрабатывают
             Вашу заявку и свяжутся с Вами в ближайшее время</p>
         </div>
-        <button class="button-close" type="button" >
+        <button class="button-close button-close--successful-sending" type="button" >
           <span class="visually-hidden">Закрыть</span>
         </button>
       </article>
    </div>
+
+   <!-- Попап форма выбора локации -->
+    <div class="popup-opacity popup-opacity--locations">
+      <section class="popup popup-locations-form">
+       <picture>
+         <source media="(min-width: 1440px)" srcset="img/popup-locations-form-desktop.avif" type="image/avif" width="450" height="475">
+         <source media="(min-width: 1024px)" srcset="img/popup-locations-form-tablet.avif" type="image/avif" width="362" height="383">
+         <source srcset="img/popup-locations-form-mobile.avif" type="image/avif" width="119" height="123">
+         <source media="(min-width: 1440px)" srcset="img/popup-locations-form-desktop.webp" type="image/webp" width="450" height="475">
+         <source media="(min-width: 1024px)" srcset="img/popup-locations-form-tablet.webp" type="image/webp" width="362" height="383">
+         <source srcset="img/popup-locations-form-mobile.webp" type="image/webp" width="119" height="123">
+         <source media="(min-width: 1440px)" srcset="img/popup-locations-form-desktop.png" type="image/png" width="450" height="475">
+         <source media="(min-width: 1024px)" srcset="img/popup-locations-form-tablet.png" type="image/png" width="362" height="383">
+         <img class="popup-locations-form__img" src="img/popup-locations-form-mobile.png" alt="Выбор локации" width="119" height="123">
+       </picture>
+       <div class="popup-locations-form__wrap">
+         <h3 class="popup-locations-form__title">Форма выбора локаций</h3>
+         <form class="locations-form" action="#" method="post">
+           <ul class="locations-form__list">
+             <li class="locations-form__item">
+               <label class="locations-form__label" for="popup-locations-field-name">Имя</label>
+               <input class="locations-form__input locations-form__input--name" type="text" id="popup-locations-field-name" name="name" placeholder="Введите ваше имя" autocomplete="off" required>
+             </li>
+             <li class="locations-form__item">
+               <label class="locations-form__label" for="popup-locations-field-email">E-mail</label>
+               <input class="locations-form__input locations-form__input--email" type="email" id="popup-locations-field-email" name="email" placeholder="Введите ваш E-mail" autocomplete="off" required>
+             </li>
+             <li class="locations-form__item">
+               <label class="locations-form__label" for="popup-locations-field-phone">Телефон</label>
+               <input class="locations-form__input locations-form__input--phone" type="tel" id="popup-locations-field-phone" name="phone" placeholder="Введите ваше Телефон" autocomplete="off" required>
+             </li>
+             <li class="locations-form__item">
+               <label class="locations-form__label" for="popup-locations-select">Локация</label>
+               <select class="locations-form__select" name="number-locations" id="popup-locations-select" required>
+                 <option value="" disabled selected hidden>Выберите локацию</option>
+                 <option value="locations-1">Локация 1</option>
+                 <option value="locations-2">Локация 2</option>
+                 <option value="locations-3">Локация 3</option>
+               </select>
+             </li>
+           </ul>
+           <button class="button locations-form__button" type="submit">Отправить</button>
+          </form>
+          <p class="popup__text">
+            <span class="one-line">Нажимая кнопку «Отправить», вы даете согласие</span>
+              на обработку персональных данных и соглашаетесь с
+            <a class="popup__link" href="#">политикой конфиденциальности</a>
+          </p>
+       </div>
+       <button class="button-close button-close--locations" type="button" >
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      </section>
+    </div>
+
+
+    <!-- Форма заказа количества ретуши -->
+    <div class="popup-opacity popup-opacity--retouch">
+      <article class="popup-retouch">
+        <h3 class="popup-retouch__title">Дополнительная ретушь фото</h3>
+        <form class="form-retouch" action="#" method="post">
+          <ul class="form-retouch__list">
+            <li class="form-retouch__item">
+              <label class="form-retouch__label" for="retouch-field-name">Количество</label>
+              <input class="form-retouch__input" type="number" min="1" max="100" id="retouch-field-name" name="quantity" placeholder="Введите количество фотографий для ретуши" autocomplete="off" required>
+            </li>
+          </ul>
+          <button class="button form-retouch__button" type="submit">Сохранить</button>
+        </form>
+        <button class="button-close button-close--retouch" type="button" >
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </article>
+    </div>
+
+    <!-- Форма комментариев -->
+    <div class="popup-opacity popup-opacity--reviews">
+      <section class="popup popup-reviews-form">
+        <h3 class="popup-reviews-form__title"><span class="one-line">Оставьте отзыв о том,</span> как прошла ваша фотосессия</h3>
+        <div class="popup-reviews-form__img-wrap">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/reviews-form-img-desktop.avif" type="image/avif" width="450" height="475">
+            <source media="(min-width: 1024px)" srcset="img/reviews-form-img-tablet.avif" type="image/avif" width="362" height="383">
+            <source srcset="img/reviews-form-img-mobile.avif" type="image/avif" width="119" height="123">
+            <source media="(min-width: 1440px)" srcset="img/reviews-form-img-desktop.webp" type="image/webp" width="450" height="475">
+            <source media="(min-width: 1024px)" srcset="img/reviews-form-img-tablet.webp" type="image/webp" width="362" height="383">
+            <source srcset="img/reviews-form-img-mobile.webp" type="image/webp" width="119" height="123">
+            <source media="(min-width: 1440px)" srcset="img/reviews-form-img-desktop.png" type="image/png" width="450" height="475">
+            <source media="(min-width: 1024px)" srcset="img/reviews-form-img-tablet.png" type="image/png" width="362" height="383">
+            <img class="popup-reviews-form__img" src="img/reviews-form-img-mobile.png" alt="Выбор локации" width="119" height="123">
+          </picture>
+        </div>
+        <div class="popup-reviews-form__wrap">
+          <form class="reviews-form" id="reviewsForm" action="#" method="post">
+            <ul class="reviews-form__list">
+              <li class="reviews-form__item">
+                <label class="reviews-form__label" for="popup-reviews-field-name">Имя</label>
+                <input class="reviews-form__input reviews-form__input--name" type="text" id="popup-reviews-field-name" name="name" placeholder="Введите ваше имя">
+              </li>
+              <li class="reviews-form__item">
+                <label class="reviews-form__label" for="popup-reviews-field-email">E-mail</label>
+                <input class="reviews-form__input reviews-form__input--email" type="email" id="popup-reviews-field-email" name="email" placeholder="Введите ваш E-mail">
+              </li>
+              <li class="reviews-form__item">
+                <label class="reviews-form__label" for="popup-reviews-field-phone">Телефон</label>
+                <input class="reviews-form__input reviews-form__input--phone" type="tel" id="popup-reviews-field-phone" name="phone" placeholder="Введите ваше Телефон">
+              </li>
+              <li class="reviews-form__item">
+                <label class="reviews-form__label" for="reviews-form-comment">Отзыв</label>
+                <textarea class="reviews-form__comment" name="comment" id="reviews-form-comment" placeholder="Введите ваш отзыв"></textarea>
+              </li>
+              <!-- Контейнер для препросмотра -->
+              <li class="reviews-form__item preview-container" id="previewContainer">
+                <!-- Верхняя секция для 1 или 3 изображений -->
+                <div class="preview-section top-section" id="topSection"></div>
+                <!-- Нижняя секция для 2, 3 или 4 изображений -->
+                <div class="preview-section bottom-section" id="bottomSection"></div>
+                <!-- Плейсхолдер когда нет изображений -->
+                <div class="preview-placeholder" id="previewPlaceholder">
+                  <span>Добавьте изображения нажмите кнопку</span>
+                </div>
+                <div class="loader" id="loader"  style="display: none;">
+                  <div class="loader__spinner"></div>
+                  <p class="loader__text">Загрузка...</p>
+                </div>
+              </li>
+              <!-- Поле для выбора файлов -->
+              <li class="reviews-form__item reviews-form__item--btn">
+                <label class="reviews-form__label visually-hidden" for="reviews-form-comment">Файл</label>
+                <input class="reviews-form__btn" type="file" name="file" id="reviews-form-btn" multiple>
+              </li>
+            </ul>
+            <button class="button reviews-form__button" type="submit">Отправить</button>
+           </form>
+           <!-- Прелоадер -->
+           <p class="popup__text">
+             <span class="one-line">Нажимая кнопку «Отправить», вы даете согласие</span>
+               на обработку персональных данных и соглашаетесь с
+             <a class="popup__link" href="#">политикой конфиденциальности</a>
+           </p>
+        </div>
+        <button class="button-close button-close--reviews" type="button" >
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </section>
+    </div>
+
+    <!-- Попап с локациями, карточки добавляются через js -->
+    <div class="popup-opacity popup-opacity--locations-gallery">
+      <section class="popup popup-locations">
+        <h6 class="visually-hidden">Попап на локации</h6>
+        <div class="popup-locations__slider">
+          <ul class="popup-locations__list">
+            <!-- Карточки слайдов заполняются динамически JS -->
+          </ul>
+          <ul class="slider-control popup-locations-control">
+            <li class="slider-control__item popup-locations-control__item">
+                <button class="control control--left popup-locations-control--left" id="popup-locations-left" type="button">
+                    <span class="visually-hidden">Стрелка влево</span>
+                </button>
+            </li>
+            <li class="slider-control__item popup-locations-control__item">
+              <button class="control control--right popup-locations-control--right" id="popup-locations-right" type="button">
+                <span class="visually-hidden">Стрелка вправо</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+          <button class="button-close button-close--locations-gallery" type="button" >
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+       </section>
+   </div>
+
+   <!-- Попап слайдер show gallery -->
+   <div class="popup-opacity popup-opacity--slider-show-gallery">
+    <section class="popup popup-slider-show-gallery-wrap">
+      <h6 class="visually-hidden">Попап Слайд шоу</h6>
+      <div class="popup-slider-show-gallery">
+        <ul class="popup-slider-show-gallery__list">
+          <!-- Карточки слайдов заполняются динамически JS -->
+        </ul>
+        <ul class="slider-control popup-slider-show-gallery-control">
+          <li class="slider-control__item popup-slider-show-gallery-control__item">
+              <button class="control control--left popup-slider-show-gallery-control--left" id="popup-slider-show-gallery-left" type="button">
+                  <span class="visually-hidden">Стрелка влево</span>
+              </button>
+          </li>
+          <li class="slider-control__item popup-slider-show-gallery-control__item">
+            <button class="control control--right popup-slider-show-gallery-control--right" id="popup-slider-show-gallery-right" type="button">
+              <span class="visually-hidden">Стрелка вправо</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+        <button class="button-close button-close--slider-show-gallery" type="button" >
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+     </section>
+ </div>
 
    <!-- Шаблон карточки комментария -->
    <template id="slide-template">
@@ -1065,6 +1210,6 @@
    </li>
   </template>
 
-  <script src="js/script.min.js" type="module"></script>
-  </body>
-  </html>
+  <script src="js/script.min.js" defer></script>
+</body>
+</html>

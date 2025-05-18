@@ -28,3 +28,11 @@ img {
 .one-line {
   display: block;
 }
+
+
+@media screen and (min-width: 1024px) {
+  .one-line {
+    display: inline;
+  }
+
+}

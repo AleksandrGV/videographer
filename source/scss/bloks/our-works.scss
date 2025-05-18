@@ -11,3 +11,25 @@
   @include heading();
   margin-bottom: 40px;
 }
+
+@media screen and (min-width: 1024px) {
+  .our-works {
+    padding-top: 68px;
+    margin-bottom: 45px;
+    
+    .heading {
+      // @include heading();
+      font-size: 30px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .our-works {
+    
+    .heading {
+      font-size: 36px;
+    }
+  }
+}

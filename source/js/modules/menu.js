@@ -1,9 +1,12 @@
 // Навигиция сайта
 
+const header = document.querySelector('.header');
 const menu = document.querySelector('.menu');
 const menuList = menu.querySelector('.menu__list');
 const menuToggle = document.querySelector('.menu__toggle');
 
+header.classList.remove('header--nojs');
+menu.classList.add('menu--closed');
 menu.classList.remove('menu--nojs');
 
 menuToggle.addEventListener('click', function() {

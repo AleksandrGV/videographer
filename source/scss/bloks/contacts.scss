@@ -9,6 +9,10 @@
     margin-right: 5px;
   }
 
+  &__link {
+    display: block;
+  }
+
   &__img {
     width: 340px;
     height: 541px;
@@ -18,10 +22,10 @@
     border-radius: 15px;
   }
 
-  &__wrap {
+  &__wrap-card {
     position: absolute;
-    top: 185px;
-    left: 69px;
+    top: 184px;
+    left: 67px;
   }
 
   &__form-wrap {
@@ -29,5 +33,70 @@
     position: relative;
     top: -54px;
     left: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts {
+    max-width: 88.5%;
+    display: grid;
+    justify-content: center;
+    padding-top: 60px;
+    margin-bottom: 142px;
+
+    &__wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transfotm 1s ease-in-out;
+
+    }
+
+    &__maps {
+      width: 864px;
+      height: 554px;
+      position: absolute;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    &__wrap-card {
+      top: 160px;
+      left: 76px;
+    }
+
+    &__form-wrap {
+      width: 100%;
+      max-width: 482px;
+      top: 0;
+      left: 190px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contacts {
+    max-width: 100%;
+    
+    &__wrap {
+      width: 1200px;
+      position: relative;
+    }
+    
+    &__maps {
+      left: 0;
+    }
+    
+    &__wrap-card {
+      left: 328px;
+    }
+    
+    &__form-wrap {
+      left: 360px;
+    }
   }
 }

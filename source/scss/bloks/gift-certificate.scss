@@ -12,8 +12,32 @@
     background-image: url("../img/bg-line-certificate.png");
     background-repeat: no-repeat;
     position: absolute;
-    left: 6px;
-    bottom: -589px;
+    left: 0;
+    right: 0;
+    bottom: -550px;
     // opacity: 0.2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .gift-certificate {
+    padding-top: 52px;
+    margin-bottom: 45px;
+
+    &::before {
+      background-image: url("../img/bg-line-certificate-tablet.png");
+      left: 438px;
+      bottom: -330px;
+    }
+
+    .heading {
+      margin-bottom: 78px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .gift-certificate::before {
+    left: 757px;
   }
 }

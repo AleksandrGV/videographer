@@ -6,6 +6,7 @@
   &__wrap {
     margin-top: 153px;
     margin-bottom: 174px;
+    transition: all 500ms ease-in-out;
   }
 
   &__title {
@@ -15,7 +16,7 @@
     line-height: 140%;
     letter-spacing: 1.2px;
     margin-bottom: 31px;
-    }
+  }
 
     &__subtitle,
     &__text {
@@ -35,29 +36,124 @@
   }
 }
 
-// .about-us__wrap {
-//   max-width: 950px;
-//   padding: 0 58px 0 80px;
-//   margin: 140px 0 131px;
-// }
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  .about-us__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 
-// .about-us__subtitle {
-//   padding-right: 80px;
-//   font-size: 36px;
-//   font-weight: 600;
-//   line-height: 120%;
-//   margin-bottom: 24px;
-// }
+    .button--open-form {
+      margin: 0 auto;
+    }
+  }
+}
 
-// .about-us__text {
-//   padding-right: 28px;
-//   font-size: 16px;
-//   font-weight: 500;
-//   margin-top: 0;
-//   margin-bottom: 0;
+@media screen and (min-width: 1024px) {
+  .about-us {
+    &__wrap {
+      padding-left: 48px;
+      margin-top: 20px;
+      margin-bottom: 60px;
+      row-gap: 0;
+    }
 
-//   &:last-child {
-//   margin-bottom: 32px;
-//   }
-// }
+    &__title {
+      max-width: 573px;
+      font-size: 48px;
+      line-height: 52px;
+      letter-spacing: 2.3px;
+      margin-bottom: 2px;
+    }
+
+    &__subtitle {
+      max-width: 488px;
+      display: block;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 34px;
+      margin-left: 12px;
+      margin-bottom: 14px;
+    }
+
+    &__wrap-text {
+      max-width: 766px;
+      margin-left: 12px;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      display: block;
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      & .one-line-tablet {
+        display: block;
+      }
+    }
+
+    .button--open-form {
+      font-size: 17px;
+      letter-spacing: 2.3px;
+      margin-left: 11px;
+      padding: 23px 24px 22px 29px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-us {
+    margin-bottom: 12px;
+
+    &__wrap {
+      max-width: 950px;
+      padding: 0 58px 0 80px;
+      margin: 83px 0 131px;
+    }
+
+    &__title {
+      max-width: 754px;
+      font-size: 66px;
+      line-height: 78px;
+      letter-spacing: 3.2px;
+      margin-bottom: 52px;
+
+   }
+
+    &__subtitle {
+      max-width: 630px;
+      padding-right: 80px;
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 120%;
+      margin-bottom: 24px;
+      margin-left: 0;
+    }
+
+    &__wrap-text {
+      max-width: 784px;
+      margin-left: 0;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .one-line-tablet {
+        display: inline;
+      }
+
+      &:last-child {
+      margin-bottom: 32px;
+      }
+    }
+
+    .button--open-form {
+      margin-left: 0;
+    }
+  }
+}
+
 

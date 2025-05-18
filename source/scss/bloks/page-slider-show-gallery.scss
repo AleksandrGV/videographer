@@ -1,0 +1,91 @@
+/* Стили для страницы slider-show-gallery и popup */
+
+.our-works-gallery {
+    max-width: 1440px;
+    width: 100%;
+    padding-top: 37px;
+    padding-bottom: 15px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    
+    
+    .slider-show-gallery__img {
+      display: block;
+      width: 280px;
+      height: 310px;
+      object-fit: cover;
+    }
+    
+    .slider-control--show {
+        top: 36%;
+    }
+  }
+  
+  .slider-show-gallery {
+    min-width: 355px;
+    max-width: 1240px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    
+    &__list {
+        width: 100%;
+        display: grid;
+        grid-auto-columns: 100%;
+        grid-auto-flow: column;
+        column-gap: 20px;
+        align-items: center;
+        @include list-reset;
+        position: relative;
+        margin-bottom: 10px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+    
+    &__list.no-transition {
+        scroll-behavior: auto;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: start;
+    }
+}
+
+  
+@media screen and (min-width: 1024px) {
+    .our-works-gallery {
+        
+        .slider-show-gallery__img {
+            width: 498px;
+            height: 552px;
+        }
+
+        .slider-control {
+        column-gap: 80%;
+        }
+    }
+}
+  
+@media screen and (min-width: 1440px) {
+    .our-works-gallery {
+        .slider-show-gallery__img {
+            width: 693px;
+            height: 768px;
+        }
+        
+        .slider-control--show {
+            top: 42%;
+        }
+
+    }   
+}
